@@ -1,0 +1,766 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Văn Học</title>
+  <link rel="stylesheet" href="trangchu.css">
+  <link rel="stylesheet" href="login-signup.css">
+  <script type="text/javascript" src="login-signup.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+		<style type="text/css">
+			*{
+			 margin: 0;
+			}
+			#down{
+				position: -webkit-sticky; 
+				position: fixed;
+				top: 0;
+			 z-index: 1;
+			 }
+				ul#thanh li a:hover{
+				color: red;
+			}
+			.menu{
+			 width: 100%;
+			 height: auto;
+			 border-bottom: 2px solid #3AD096;
+			}
+			.divloai{
+				background-color: #F2EDED;
+			
+			}
+			span#phanloai{
+			 font-size: 25px;
+			 width: 30% ; 
+			 color : #81DDF8;
+			 padding-left: 70px;
+			 margin-bottom: 1rem;
+			}
+			li{
+				font-size: 20px;
+				color: #81DDF8;
+				margin-bottom: 4px;
+			}
+			h5{
+				padding-top: 30px;
+				padding-bottom: 3px;
+				
+			}
+			img#anh{
+				width: 195px;
+				height: 250px;
+			}
+			 img:hover#anh{
+		        width: 225px;
+		        height: 280px;
+		      }
+			h5{
+				font-size: 22px;
+				
+			}
+			a#title{
+				margin-left: 10px;
+				font-size: 19px;
+				color: #FB9D6F ;
+			}
+			pre{
+				margin-left: 10px;
+				font-size: 15px; 
+
+			}
+			a#read
+			{
+				margin-left: 10px;
+				background-color: red;
+				color: white;
+				font-size: 15px;
+				padding : 4px;
+			}
+		</style>
+	</head>
+	<body class="nen">
+			<div class="menu">
+					<div class="up">
+						<img src="./img/khung.png"  style="width: 100%;">
+					</div><!--up-->
+			<nav class="navbar navbar-expand-lg navbar-light bg-light " id="down"style="width: 100%;" >
+				<div class="container" >
+					<a class="navbar-brand" href="demo.html "><img src="img/photo/logo.jpg" alt="" style="width:170px;height: 60px;"></a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+		 </button>
+				<div class="collapse navbar-collapse" id="navbarSupportedContent" >
+				<ul class="navbar-nav mr-auto " id="thanh"  style="margin-left: 55px;font-weight: bold; font-size: 18px; ">
+					<li class="nav-item ">
+						<a class="nav-link" href="demo.html ">Trang Chủ</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="gioi-thieu.html ">Giới Thiệu</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="tro-giup.html ">Liên Hệ</a>
+					</li>
+					<li class="nav-item">
+		        <a class="nav-link" href="login.html" data-toggle="modal" data-target="#modal-login">Đăng Nhập</a>
+		    </li>
+		    <li class="nav-item">
+		        <a class="nav-link" href="signup.html" data-toggle="modal" data-target="#modal-signup">Đăng Kí</a>
+		    </li>
+				</ul><!--het ul-->
+				<form class="form-inline my-2 my-lg-0">
+					<input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+			<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+				</form>
+			</div>
+			</div><!--  het container -->
+			</nav><!--het menu-->
+		</div><!--het menu-->
+
+<!--modal box-->
+	<!--modal box login-->
+	<div class="modal fade" id="modal-login" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="login">
+		<div class="head">
+			<h2 style="text-align: center;">Đăng nhập</h2>
+			<hr width="80%">
+		</div>
+		<div class="content1">
+			<form action="">
+				<div class="input">
+					<p>Số điện thoại/Email</p>
+					<input type="text" placeholder="Nhập số điện thoại hoặc Email">
+					<p>Mật khẩu</p>
+					<input type="password" placeholder="Nhập mật khẩu" id="password" name="password">
+					<span onclick="show()" class="showPassword">Hiện</span>
+				</div>
+				<div class="forgot-password">
+					<a href="forgot-password.html">Quên mật khẩu?</a>
+				</div>
+				<div style="text-align: center">
+					<button class="button-submit">Đăng nhập</button>
+					<button class="button-cancel">Bỏ qua</button>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+	<!--het modal box login-->
+	<!--modal box signup-->
+	<div class="modal fade" id="modal-signup" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="login">
+		<div class="head">
+			<h2 style="text-align: center;">Đăng ký</h2>
+			<hr width="80%">
+		</div>
+		<div class="content1">
+			<form action="">
+				<div class="input">
+					<p>Số điện thoại/Email</p>
+					<input type="text" placeholder="Nhập số điện thoại hoặc Email">
+					<p>Mật khẩu</p>
+					<input type="password" placeholder="Nhập mật khẩu" id="password" name="password1">
+					<span onclick="show()" class="showPassword">Hiện</span>
+					<p>Nhập lại mật khẩu</p>
+					<input type="password" placeholder="Nhập lại mật khẩu" id="password" name="password2">
+					<span onclick="show()" class="showPassword">Hiện</span>
+				</div>
+				<div class="question">
+					<table cellpadding="5px">
+						<tr>
+							<td>
+								<input type="checkbox">
+							</td>
+							<td>
+								<span>Tôi đồng ý với các chính sách bảo mật của HNTBook.</span>
+							</td>
+						</tr>
+					</table>
+				</div>
+				<div class="button" style="text-align: center">
+					<button class="button-submit">
+						<span>Đăng ký</span>
+					</button>
+					<br>
+					<button class="button-cancel">
+						<span>Bỏ qua</span>
+					</button>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+	<!--het modal box signup-->
+<!--het modal box-->
+<div class="container-fluid">
+	<div class="row">
+	<div class="col-4 " style="background-color: #EFF0E5;">
+	<br>
+	<div class="divloai">
+			<span id="phanloai">THỂ LOẠI</span>
+			<br>
+			<ul>
+				<li> <a href="#Sach_vh">Sách văn học việt Nam</a></li>
+				<hr>
+				<li ><a href="#Sach_nn">Sách văn học nước ngoài</a> </li>
+				<hr>
+				<li><a href="#Nên_doc">Top những sách văn học nên đọc</a> </li>
+				<hr>
+				<li><a href="#Tac_gia">Một số tác giả được yêu thích
+				</a> </li><hr>
+			</ul>
+		</div>
+		<br>
+		<div class="row">
+			<div class="col-12"><img src="img/vh/aphu.jpg" style="width: 100%;"></div>
+			<b style="padding-left: 8px;">Vợ Chồng A Phủ- Tô Hoài</b>
+		</div><br>
+		<div class="row">
+			<div class="col-12"><img src="img/vh/tohoai.jpg" style="width: 70%;"></div>
+			<b style="padding-left: 8px;">Nhà văn:Tô Hoài</b>
+			<p>Tô Hoài (tên khai sinh: Nguyễn Sen; 27 tháng 9 năm 1920 – 6 tháng 7 năm 2014) là một nhà văn Việt Nam. Một số tác phẩm đề tài thiếu nhi của ông được dịch ra ngoại ngữ. Ông được nhà nước Việt Nam trao tặng Giải thưởng Hồ Chí Minh về Văn học – Nghệ thuật Đợt 1 (1996) cho các tác phẩm: Xóm giếng, Nhà nghèo, O chuột, Dế mèn phiêu lưu ký, Núi Cứu quốc, Truyện Tây Bắc, Mười năm, Xuống làng, Vỡ tỉnh, Tào lường, Họ Giàng ở Phìn Sa, Miền Tây, Vợ chồng A Phủ, Tuổi trẻ Hoàng Văn Thụ.</p>
+		</div>
+	</div><!--het col-4-->
+	<div class="col-8">
+		<div class="row">
+<!--SACH VAN HOC VIET NAM-->
+
+
+			<div class="col-sm-12">
+			<h5 id="Sach_vh" style="font-size: 19px;">Sách văn học Việt Nam<img src="img/dayngang.gif"></h5> 
+			<hr>
+			<table>
+			 <tr>
+				 <th>
+				 	<a href=""><img id="anh" src="img/vh/vhvn.jpg"></a>
+				 </th>
+				 <th>
+					 <a  id="title" href=""> Truyện Kiều</a>
+					 <pre>
+Tác Giả : Nguyễn Du
+NXB : NXBVH
+					 </pre>
+					 <a id="read" href="">ĐỌC THỬ</a>
+					 <a id="read" href=""> Mua ngay : 65.000 VNĐ</a>
+				 </th>
+			 </tr>
+		 </table><!--het mot sach-->
+		 <hr>
+		</div><!--col-12 con-->
+
+			<div class="col-sm-12">
+			<table>
+			 <tr>
+				 <th>
+				 	<a href=""><img id="anh" src="img/vh/vh3.png"></a>
+				 </th>
+				 <th>
+					 <a  id="title" href=""> Bảy bước tới mùa hè-truyện dài</a>
+					 <pre>
+Tác Giả : Nguyễn Nhật Ánh 
+NXB : NXBVH
+					 </pre>
+					 <a id="read" href="">ĐỌC THỬ</a>
+					 <a id="read" href=""> Mua ngay : 65.000 VNĐ</a>
+				 </th>
+			 </tr>
+		 </table><!--het mot sach-->
+		 <hr>
+		</div><!--col-12 con-->
+
+			<div class="col-sm-12">
+			<table>
+			 <tr>
+				 <th>
+				 	<a href=""><img id="anh" src="img/vh/vh2.jpg"></a>
+				 </th>
+				 <th>
+					 <a  id="title" href=""> Dế Mèn phiêu lưu ký</a>
+					 <pre>
+Tác Giả : Tô Hoài
+NXB : kim Đồng
+					 </pre>
+					 <a id="read" href="">ĐỌC THỬ</a>
+					 <a id="read" href=""> Mua ngay : 55.300 VNĐ</a>
+				 </th>
+			 </tr>
+		 </table><!--het mot sach-->
+		 <hr>
+		</div><!--col-12 con-->
+
+			<div class="col-sm-12">
+			<table>
+			 <tr>
+				 <th>
+				 	<a href=""><img id="anh" src="img/vh1.jpg"></a>
+				 </th>
+				 <th>
+					 <a  id="title" href=""> Số Đỏ</a>
+					 <pre>
+Tác Giả : Vũ Trọng Phụng
+NXB : NXBVH
+					 </pre>
+					 <a id="read" href="">ĐỌC THỬ</a>
+					 <a id="read" href=""> Mua ngay : 25.000 VNĐ</a>
+				 </th>
+			 </tr>
+		 </table><!--het mot sach-->
+		 <hr>
+		</div><!--col-12 con-->
+
+			<div class="col-sm-12">
+			<table>
+			 <tr>
+				 <th>
+				 	<a href=""><img id="anh" src="img/vh/vh7.jpg"></a>
+				 </th>
+				 <th>
+					 <a  id="title" href=""> Cho tôi xin một vé trở về tuổi thơ</a>
+					 <pre>
+Tác Giả : Nguyễn Nhật Ánh
+NXB : Đặng Thị Hiền
+					 </pre>
+					 <a id="read" href="">ĐỌC THỬ</a>
+					 <a id="read" href=""> Mua ngay : 22.000 VNĐ</a>
+				 </th>
+			 </tr>
+		 </table><!--het mot sach-->
+		 <hr>
+		</div><!--col-12 con-->
+
+			<div class="col-sm-12">
+			<table>
+			 <tr>
+				 <th>
+				 	<a href=""><img id="anh" src="img/vh/vh30.jpg"></a>
+				 </th>
+				 <th>
+					 <a  id="title" href=""> Bốn mươi năm nói láo</a>
+					 <pre>
+Tác Giả : Vũ Bằng
+NXB : NXB Quỳnh Như
+					 </pre>
+					 <a id="read" href="">ĐỌC THỬ</a>
+					 <a id="read" href=""> Mua ngay : 120.000 VNĐ</a>
+				 </th>
+			 </tr>
+		 </table><!--het mot sach-->
+		 <hr>
+		</div><!--col-12 con-->
+			<div class="col-sm-12">
+			<table>
+			 <tr>
+				 <th>
+				 	<a href=""><img id="anh" src="img/vh/vh31.jpg"></a>
+				 </th>
+				 <th>
+					 <a  id="title" href=""> Sống Mòn</a>
+					 <pre>
+Tác Giả : Nam Cao
+NXB : Kim Đồng
+					 </pre>
+					 <a id="read" href="">ĐỌC THỬ</a>
+					 <a id="read" href=""> Mua ngay : 24.000 VNĐ</a>
+				 </th>
+			 </tr>
+		 </table><!--het mot sach-->
+		 <hr>
+		</div><!--col-12 con-->
+			<div class="col-sm-12">
+			<table>
+			 <tr>
+				 <th>
+				 	<a href=""><img id="anh" src="img/vh/vh34.jpg"></a>
+				 </th>
+				 <th>
+					 <a  id="title" href=""> Nhật Ký Trong Tù</a>
+					 <pre>
+Tác Giả : Hồ Chí Minh
+NXB : NXBVH
+					 </pre>
+					 <a id="read" href="">ĐỌC THỬ</a>
+					 <a id="read" href=""> Mua ngay : 200.000 VNĐ</a>
+				 </th>
+			 </tr>
+		 </table><!--het mot sach-->
+		 <hr>
+		</div><!--col-12 con-->
+
+<!-- SACH VAN HOC NUOC NGOAI -->
+
+  <div class="col-sm-12">
+			<h5 id="Sach_nn" style="font-size: 19px;">Sách văn học nước ngoài<img src="img/dayngang.gif"></h5><a href="#Sach_vh">Về đầu trang</a>
+			<hr>
+			<table>
+			 <tr>
+				 <th>
+				 	<a href=""><img id="anh" src="img/vh/vh1.jpg"></a>
+				 </th>
+				 <th>
+					 <a  id="title" href=""> Kiêu hãnh và định kiến</a>
+					 <pre>
+Tác Giả : jane Asten
+dịch : Diệp Minh Tâm
+					 </pre>
+					 <a id="read" href="">ĐỌC THỬ</a>
+					 <a id="read" href=""> Mua ngay : 65.000 VNĐ</a>
+				 </th>
+			 </tr>
+		 </table><!--het mot sach-->
+		 <hr>
+		</div><!--col-2 con-->
+
+			<div class="col-sm-12">
+			<table>
+			 <tr>
+				 <th>
+				 	<a href=""><img id="anh" src="img/vh/vh4.jpg"></a>
+				 </th>
+				 <th>
+					 <a  id="title" href=""> Bí ẩn về con chó lúc nửa đêm</a>
+					 <pre>
+Tác Giả : Mark Haddon
+NXB : NXBVH
+					 </pre>
+					 <a id="read" href="">ĐỌC THỬ</a>
+					 <a id="read" href=""> Mua ngay : 65.000 VNĐ</a>
+				 </th>
+			 </tr>
+		 </table><!--het mot sach-->
+		 <hr>
+		</div><!--col-12 con-->
+
+			<div class="col-sm-12">
+			<table>
+			 <tr>
+				 <th>
+				 	<a href=""><img id="anh" src="img/vh/vh8.jpg"></a>
+				 </th>
+				 <th>
+					 <a  id="title" href=""> Chiếc lá cuối cùng</a>
+					 <pre>
+Tác Giả : Ohenri
+dịch: nhiều người dịch
+NXB : NXBVN
+					 </pre>
+					 <a id="read" href="">ĐỌC THỬ</a>
+					 <a id="read" href=""> Mua ngay : 55.300 VNĐ</a>
+				 </th>
+			 </tr>
+		 </table><!--het mot sach-->
+		 <hr>
+		</div><!--col-12 con-->
+
+			<div class="col-sm-12">
+			<table>
+			 <tr>
+				 <th>
+				 	<a href=""><img id="anh" src="img/vh/vh11.jpg"></a>
+				 </th>
+				 <th>
+					 <a  id="title" href=""> lạc trên hoang đảo</a>
+					 <pre>
+Tác Giả : Robison
+NXB : NXBVH
+					 </pre>
+					 <a id="read" href="">ĐỌC THỬ</a>
+					 <a id="read" href=""> Mua ngay : 92.000 VNĐ</a>
+				 </th>
+			 </tr>
+		 </table><!--het mot sach-->
+		 <hr>
+		</div><!--col-12 con-->
+
+			<div class="col-sm-12">
+			<table>
+			 <tr>
+				 <th>
+				 	<a href=""><img id="anh" src="img/vh/vh21.jpg"></a>
+				 </th>
+				 <th>
+					 <a  id="title" href=""> Nếu Chỉ còn một ngày để sống </a>
+					 <pre>
+Tác Giả : Nicola Soon
+NXB : NXBVH
+					 </pre>
+					 <a id="read" href="">ĐỌC THỬ</a>
+					 <a id="read" href=""> Mua ngay : 22.000 VNĐ</a>
+				 </th>
+			 </tr>
+		 </table><!--het mot sach-->
+		 <hr>
+		</div><!--col-12 con-->
+
+			<div class="col-sm-12">
+			<table>
+			 <tr>
+				 <th>
+				 	<a href=""><img id="anh" src="img/vh/vh17.jpg"></a>
+				 </th>
+				 <th>
+					 <a  id="title" href=""> Nữ sinh</a>
+					 <pre>
+Tác Giả : Dakai Ozaka
+NXB : Hội nhà văn
+					 </pre>
+					 <a id="read" href="">ĐỌC THỬ</a>
+					 <a id="read" href=""> Mua ngay : 24.000 VNĐ</a>
+				 </th>
+			 </tr>
+		 </table><!--het mot sach-->
+		 <hr>
+		</div><!--col-12 con-->
+			<div class="col-sm-12">
+			<table>
+			 <tr>
+				 <th>
+				 	<a href=""><img id="anh" src="img/vh/vh18.jpg"></a>
+				 </th>
+				 <th>
+					 <a  id="title" href=""> Nhà giả kim</a>
+					 <pre>
+Tác Giả : Paulo Dibala
+NXB : NXBVH
+					 </pre>
+					 <a id="read" href="">ĐỌC THỬ</a>
+					 <a id="read" href=""> Mua ngay : 200.000 VNĐ</a>
+				 </th>
+			 </tr>
+		 </table><!--het mot sach-->
+		 <hr>
+		</div><!--col-12 con-->
+
+
+		<!-- SACH VAN HOC NEN DOC -->
+
+  <div class="col-sm-12">
+			<h5 id="Nên_doc" style="font-size: 19px;">Sách văn học book.hnt khuyên nên đọc<img src="img/dayngang.gif"></h5><a href="#Sach_vh">Về đầu trang</a>
+			<hr>
+			<table>
+			 <tr>
+				 <th>
+				 	<a href=""><img id="anh" src="img/vh/vh99.jpg"></a>
+				 </th>
+				 <th>
+					 <a  id="title" href=""> Bãi vàng</a>
+					 <pre>
+Tác Giả : Ma Văn Kháng
+NXB : NXB hội phụ nữ
+					 </pre>
+					 <a id="read" href="">ĐỌC THỬ</a>
+					 <a id="read" href=""> Mua ngay : 65.000 VNĐ</a>
+				 </th>
+			 </tr>
+		 </table><!--het mot sach-->
+		 <hr>
+		</div><!--col-12 con-->
+
+			<div class="col-sm-12">
+			<table>
+			 <tr>
+				 <th>
+				 	<a href=""><img id="anh" src="img/vh/vh98.jpg"></a>
+				 </th>
+				 <th>
+					 <a  id="title" href="">Tắt đèn</a>
+					 <pre>
+Tác Giả : Ngô Tất Tố
+NXB : NXBVH
+					 </pre>
+					 <a id="read" href="">ĐỌC THỬ</a>
+					 <a id="read" href=""> Mua ngay : 65.000 VNĐ</a>
+				 </th>
+			 </tr>
+		 </table><!--het mot sach-->
+		 <hr>
+		</div><!--col-12 con-->
+
+			<div class="col-sm-12">
+			<table>
+			 <tr>
+				 <th>
+				 	<a href=""><img id="anh" src="img/vh/vh97.jpg"></a>
+				 </th>
+				 <th>
+					 <a  id="title" href=""> Đất rừng Phương Nam</a>
+					 <pre>
+Tác Giả : Đoàn Giỏi
+NXB : kim Đồng
+					 </pre>
+					 <a id="read" href="">ĐỌC THỬ</a>
+					 <a id="read" href=""> Mua ngay : 55.300 VNĐ</a>
+				 </th>
+			 </tr>
+		 </table><!--het mot sach-->
+		 <hr>
+		</div><!--col-12 con-->
+
+			<div class="col-sm-12">
+			<table>
+			 <tr>
+				 <th>
+				 	<a href=""><img id="anh" src="img/vh1.jpg"></a>
+				 </th>
+				 <th>
+					 <a  id="title" href=""> Số Đỏ</a>
+					 <pre>
+Tác Giả : Vũ Trọng Phụng
+NXB : NXBVH
+					 </pre>
+					 <a id="read" href="">ĐỌC THỬ</a>
+					 <a id="read" href=""> Mua ngay : 25.000 VNĐ</a>
+				 </th>
+			 </tr>
+		 </table><!--het mot sach-->
+		 <hr>
+		</div><!--col-12 con-->
+
+			<div class="col-sm-12">
+			<table>
+			 <tr>
+				 <th>
+				 	<a href=""><img id="anh" src="img/vh/vh34.jpg"></a>
+				 </th>
+				 <th>
+					 <a  id="title" href=""> Nhật Ký Trong Tù</a>
+					 <pre>
+Tác Giả : Hồ Chí Minh
+NXB : NXBVH
+					 </pre>
+					 <a id="read" href="">ĐỌC THỬ</a>
+					 <a id="read" href=""> Mua ngay : 200.000 VNĐ</a>
+				 </th>
+			 </tr>
+		 </table><!--het mot sach-->
+		 <hr>
+		</div><!--col-12 con-->
+
+			<!-- MỘT SỐ TÁC GIẢ YÊU THÍCH -->
+
+  <div class="col-sm-12">
+			<h5 id="Tac_gia" style="font-size: 19px;">Một số tác giả yêu thích<img src="img/moi.gif"></h5><a href="#Sach_vh">Về đầu trang</a>
+			<hr>
+			<table>
+			 <tr>
+				 <th>
+				 	<a href=""><img id="anh" src="img/vh/namcao.jpg"></a>
+				 </th>
+				 <td>
+					 <a  id="title" href="https://vi.wikipedia.org/wiki/Nam_Cao">Nam cao</a>
+					 <p>
+Năm sinh-mất (1915 hoặc 1917– 28 tháng 11 năm 1951) là một nhà văn và cũng là một chiến sĩ, liệt sĩ người Việt Nam. Ông là nhà văn hiện thực lớn (trước Cách mạng), một nhà báo kháng chiến (sau Cách mạng), một trong những nhà văn tiêu biểu nhất thế kỷ 20. Nam Cao có nhiều đóng góp quan trọng đối với việc hoàn thiện phong cách truyện ngắn và tiểu thuyết Việt Nam ở nửa đầu thế kỷ 20
+					 </p>
+					</td>
+			 </tr>
+		 </table><!--het mot sach-->
+		 <hr>
+		</div><!--col-12 con-->
+	
+		<div class="col-12">
+				<table>
+			 <tr>
+				 <th>
+				 	<a href=""><img id="anh" src="img/vh/vutrongphung.jpg"></a>
+				 </th>
+				 <td>
+					 <a  id="title" href="https://vi.wikipedia.org/wiki/V%C5%A9_Tr%E1%BB%8Dng_Ph%E1%BB%A5ng">Vũ Trọng Phụng</a>
+					 <p>
+Năm sinh-mất (1912-1939) là một nhà văn, nhà báo nổi tiếng của Việt Nam vào đầu thế kỷ 20. Tuy thời gian cầm bút rất ngắn ngủi, với tác phẩm đầu tay là truyện ngắn Chống nạng lên đường đăng trên Ngọ báo vào năm 1930, ông đã để lại một kho tác phẩm đáng kinh ngạc: hơn 30 truyện ngắn, 9 tập tiểu thuyết, 9 tập phóng sự, 7 vở kịch, cùng một bản dịch vở kịch từ tiếng Pháp, một số bài viết phê bình, tranh luận văn học và hàng trăm bài báo viết về các vấn đề chính trị, xã hội, văn hóa
+					 </p>
+					</td>
+			 </tr>
+		 </table><!--het mot sach-->
+		 <hr>
+		</div><!--col-12 con-->
+		<div class="col-12">
+        		<table>
+			 <tr>
+				 <th>
+				 	<a href=""><img id="anh" src="img/vh/Bac.jpg"></a>
+				 </th>
+				 <td>
+					 <a  id="title" href="https://vi.wikipedia.org/wiki/H%E1%BB%93_Ch%C3%AD_Minh">Hồ chí Minh</a>
+					 <p>
+Năm sinh-mất  (19 tháng 5 năm 1890 – 2 tháng 9 năm 1969), tên khai sinh là Nguyễn Sinh Cung,là nhà cách mạng, người sáng lập Đảng Cộng sản Việt Nam, một trong những người đặt nền móng và lãnh đạo công cuộc đấu tranh giành độc lập, toàn vẹn lãnh thổ cho Việt Nam trong thế kỷ XX, một chiến sĩ cộng sản quốc tế. Ông là người viết và đọc bản Tuyên ngôn Độc lập khai sinh nước Việt Nam Dân chủ Cộng hòa ngày 2 tháng 9 năm 1945 tại Quảng trường Ba Đình, Hà Nội, Chủ tịch nước Việt Nam Dân chủ Cộng hòa trong thời gian 1945–1969, Chủ tịch Ban Chấp hành Trung ương Đảng Lao động Việt Nam trong thời gian 1951–1969.
+<br>
+ Ông đồng thời cũng là nhà văn, nhà thơ và nhà báo với nhiều tác phẩm viết bằng tiếng Việt, tiếng Hán và tiếng Pháp. Hồ Chí Minh đã được tạp chí Time bình chọn là 1 trong 100 người có ảnh hưởng nhất của thế kỷ XX.
+					 </p>
+					</td>
+			 </tr>
+		 </table><!--het mot sach-->
+		 <hr>
+		</div><!--col-12 con-->
+		
+		</div><!--row con-->
+	</div><!--het col-8-->
+</div><!--het row lon-->
+
+</div><!--het container-->
+
+
+<!-- HẾT DANH SÁCH TIỂU THUYẾT -->
+
+		<!--signature-->
+  <div class="signature">
+    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-pencil" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+      <path fill-rule="evenodd" d="M12.146.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-10 10a.5.5 0 0 1-.168.11l-5 2a.5.5 0 0 1-.65-.65l2-5a.5.5 0 0 1 .11-.168l10-10zM11.207 2.5L13.5 4.793 14.793 3.5 12.5 1.207 11.207 2.5zm1.586 3L10.5 3.207 4 9.707V10h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.293l6.5-6.5zm-9.761 5.175l-.106.106-1.528 3.821 3.821-1.528.106-.106A.5.5 0 0 1 5 12.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.468-.325z"/>
+    </svg>
+    <i>Tôi đã sống hàng nghìn cuộc sống.  Tôi đã yêu hàng nghìn tình yêu. Tôi đã đi trong những thế giới xa xôi và đã thấy tận cùng của thời gian. Bởi vì tôi đọc sách</i> <br>
+        <b>"__GEORGE R. R. MARTIN__"</b>
+  </div>
+  <!--het signature-->
+  <!--footer-->
+  <div class="footer">
+    <div class="footer-left">
+      <p style="font-family: Brush Script MT; font-size: x-large;">Book HNT</p>
+      <p>Cơ sở 1: Số 3, Cầu Giấy, Hà Nội <br> Cơ sở 2: Số 1, Nguyễn Khánh Toàn, Quan Hoa, Hà Nội</p>
+      <p><b>Làm bạn với Book HNT:</b></p>
+      <div>
+        <a target="_blank" href="https://www.facebook.com/profile.php?id=100010908735142">
+                <img src="img/fb.png">
+            </a>
+            <a target="_blank" href="https://www.instagram.com/dthhihi/?fbclid=IwAR07qOBe5z14WoS91I0HNkH4E4w2M_g8QN9hM6kPlGVuEeqJzTX5_RBDh2o">
+                    <img src="img/ig.png">
+                </a>
+                <a target="_blank" href="https://mail.google.com/mail/u/0/#inbox">
+                    <img src="img/gm.png">
+                </a>
+                <a target="_blank" href="https://www.youtube.com/watch?v=C_ceujR3Dfw&feature=youtu.be">
+                    <img src="img/youtube.png">
+                </a>
+      </div>
+    </div>
+    <div class="footer-center">
+      <p>BookHNT.com nhận đặt hàng trực tuyến và giao hàng tận nơi trên mọi miền tổ quốc.</p>
+      <div>
+        <p>ĐKKD số 0108796796 do SKHĐT TP Hà Nội cấp ngày 24/06/2019 <br>Chịu trách nhiệm nội dung: Đặng Thị Hiền, Nguyễn Thị Quỳnh Như, Nguyễn Hồng Tâm <br>Giấy xác nhận Đăng ký hoạt động phát hành xuất bản phẩm điện tử số 8132/XN-CXBIPH do Cục Xuất Bản, In và Phát hành cấp ngày 20/11/2020.</p>
+      </div>
+      <div>
+        <div style="width: 20%; float: left;">
+          <p><b>Thông tin liên hệ:</b></p>
+        </div>
+        <div style="width: 33%; float: left;">
+          <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-envelope" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2zm13 2.383l-4.758 2.855L15 11.114v-5.73zm-.034 6.878L9.271 8.82 8 9.583 6.728 8.82l-5.694 3.44A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.739zM1 11.114l4.758-2.876L1 5.383v5.73z"/>
+          </svg>
+          <span>Email: BookHNT@gmail.com</span>
+        </div>
+        <div style="width:34%; float: left;">
+          <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-telephone" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.062a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"/>
+          </svg>
+          <span>Phone: 0123456789</span>
+        </div>
+      </div>
+    </div>
+    <div class="footer-right1">
+      <div style="width: 50%; float: left; padding-right: 10px;"><img src="img/vtp.jpg" alt="viettelpay" width="100%"></div>
+      <div style="width: 50%; float: left; position: relative; top: 5px;"><img src="img/momo.jpg" alt="momo" width="83%"></div>
+    </div>
+  <!--het footer-->
+
+	</body>
+</html>

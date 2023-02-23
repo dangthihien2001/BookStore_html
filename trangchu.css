@@ -1,0 +1,133 @@
+body {
+	width: 100%;
+	height: 100%;
+	margin: auto;
+	background-color: #f0f0f0;
+}
+/*header*/
+.header {
+	width: 100%;
+ 	height: auto;
+ 	border-bottom: 2px solid #3AD096;
+ 	float: left;
+}
+.menu {
+	margin: auto;
+	border-bottom: 2px solid #3AD096;
+}
+/*footer*/
+.signature {
+	width: 100%;
+	float: left;
+	background-color: #2E855D;
+	color: white;
+	text-align: center;
+	padding: 30px;
+}
+.footer {
+	font-size: small;
+	margin: auto;
+	height: 200px;
+}
+.footer-left {
+	height: 100%;
+	width: 24%;
+	float: left;
+	padding: 10px 0 0 10px;
+	text-align: justify;
+}
+.footer-center {
+	height: 100%;
+	float: left;
+	width: 58%;
+	padding: 10px 5px 0 5px;
+	text-align: justify;
+}
+.footer-right1 {
+	height: 100%;
+	float: left;
+	width: 18%;
+	text-align: center;
+	padding-top: 20px;
+}
+.footer p {
+	padding: 5px;
+	margin: 0px;
+}
+
+/*body trang gioi thieu*/
+.body-gioithieu {
+	width: 100%;
+	height: 100%;
+	float: left;
+	padding-left: 8%;
+	padding-right: 8%;
+	text-align: justify;
+	font-size: small;
+}
+.body-gioithieu .left {
+	width: 23%;
+	float: left;
+	padding: 20px;
+	text-align: center;
+}
+.body-gioithieu .xem-them {
+
+}
+.body-gioithieu .right {
+	float: left;
+	width: 77%;
+	padding: 20px;
+}
+.body-gioithieu .right p {
+}
+
+/*body trang tro giup*/
+.body-trogiup {
+	width: 100%;
+	height: 100%;
+	float: left;
+	padding-left: 8%;
+	padding-right: 8%;
+	text-align: justify;	
+	font-size: small;
+}
+.body-trogiup .left{
+	width: 23%;
+	float: left;
+	padding: 20px;
+}
+.body-trogiup .left li{
+	border: solid 1px #F8B908;
+	border-radius: 10px;
+	list-style: none;
+	padding: 10px;
+	margin: 10px 0;
+	font-weight: bold
+}
+.body-trogiup .left span{
+	color: #F8B908;
+	font-size: x-small;
+}
+.body-trogiup .right{
+	width: 77%;
+	float: left;
+	padding: 20px;
+}
+.body-trogiup .right h5{
+	color: #F8B908;
+}
+.body-trogiup .right hr{
+	background-color: #F8B908;
+	border-style: solid;
+}
+.body-trogiup .right td{
+	border: solid 1px grey;
+}
+.left ul li:hover {
+	background-color: #F8B908;
+}
+.left ul li:hover span {
+	color: white;
+}
+

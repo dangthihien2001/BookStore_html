@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Giới thiệu</title>
+	<link rel="stylesheet" href="trangchu.css">
+	<link rel="stylesheet" href="login-signup.css">
+	<script type="text/javascript" src="login-signup.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</head>
+<body>
+	<!--header-->
+	<div class="header">
+    	<div class="up">
+        	<img src="./img/khung.png"  style="width: 100%;">
+      	</div>
+      	<!--menu-->
+  		<nav class="navbar navbar-expand-lg navbar-light bg-light " id="down"style="width: 100%;" >
+    	<div class="container" >
+      		<a class="navbar-brand" href="demo.html "><img src="img/photo/logo.jpg" alt="" style="height: 60px;"></a>
+  			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    		<span class="navbar-toggler-icon"></span>
+			</button>
+    	<div class="collapse navbar-collapse" id="navbarSupportedContent" >
+    	<ul class="navbar-nav mr-auto " id="thanh"  style="margin-left: 55px;font-weight: bold; font-size: 18px; ">
+      		<li class="nav-item ">
+        		<a class="nav-link" href="demo.html">Trang Chủ</a>
+      		</li>
+		    <li class="nav-item">
+		        <a class="nav-link" href="gioi-thieu.html">Giới Thiệu</a>
+		    </li>
+		    <li class="nav-item">
+		        <a class="nav-link" href="tro-giup.html">Trợ giúp</a>
+		    </li>
+		    <li class="nav-item">
+		        <a class="nav-link" href="login.html" data-toggle="modal" data-target="#modal-login">Đăng Nhập</a>
+		    </li>
+		    <li class="nav-item">
+		        <a class="nav-link" href="signup.html" data-toggle="modal" data-target="#modal-signup">Đăng Kí</a>
+		    </li>
+    	</ul>
+    	<form class="form-inline my-2 my-lg-0">
+    		<input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+     		<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    	</form>
+  		</div>
+    	</div>
+  		</nav>
+  		<!--het menu-->
+	</div>
+	<!--het header-->
+
+<!--modal box-->
+	<!--modal box login-->
+	<div class="modal fade" id="modal-login" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="login">
+		<div class="head">
+			<h2 style="text-align: center;">Đăng nhập</h2>
+			<hr width="80%">
+		</div>
+		<div class="content1">
+			<form action="">
+				<div class="input">
+					<p>Số điện thoại/Email</p>
+					<input type="text" placeholder="Nhập số điện thoại hoặc Email">
+					<p>Mật khẩu</p>
+					<input type="password" placeholder="Nhập mật khẩu" id="password" name="password">
+					<span onclick="show()" class="showPassword">Hiện</span>
+				</div>
+				<div class="forgot-password">
+					<a href="forgot-password.html">Quên mật khẩu?</a>
+				</div>
+				<div style="text-align: center">
+					<button class="button-submit">Đăng nhập</button>
+					<button class="button-cancel">Bỏ qua</button>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+	<!--het modal box login-->
+	<!--modal box signup-->
+	<div class="modal fade" id="modal-signup" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="login">
+		<div class="head">
+			<h2 style="text-align: center;">Đăng ký</h2>
+			<hr width="80%">
+		</div>
+		<div class="content1">
+			<form action="">
+				<div class="input">
+					<p>Số điện thoại/Email</p>
+					<input type="text" placeholder="Nhập số điện thoại hoặc Email">
+					<p>Mật khẩu</p>
+					<input type="password" placeholder="Nhập mật khẩu" id="password" name="password1">
+					<span onclick="show()" class="showPassword">Hiện</span>
+					<p>Nhập lại mật khẩu</p>
+					<input type="password" placeholder="Nhập lại mật khẩu" id="password" name="password2">
+					<span onclick="show()" class="showPassword">Hiện</span>
+				</div>
+				<div class="question">
+					<table cellpadding="5px">
+						<tr>
+							<td>
+								<input type="checkbox">
+							</td>
+							<td>
+								<span>Tôi đồng ý với các chính sách bảo mật của HNTBook.</span>
+							</td>
+						</tr>
+					</table>
+				</div>
+				<div class="button" style="text-align: center">
+					<button class="button-submit">
+						<span>Đăng ký</span>
+					</button>
+					<br>
+					<button class="button-cancel">
+						<span>Bỏ qua</span>
+					</button>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+	<!--het modal box signup-->
+<!--het modal box-->
+
+	<!--body-->
+	<div class="body-gioithieu">
+		<!--left: bxh sach ban chay-->
+		<div class="left">
+			<h5>Sách nổi bật</h5>
+			<img src="img/sach2.jpg" alt="" width="100%">
+			<img src="img/sach3.jpg" alt="" width="100%">
+			<img src="img/sach4.jpg" alt="" width="100%">
+			<img src="img/sach5.jpg" alt="" width="100%">
+			<img src="img/sach6.jpg" alt="" width="100%">
+			<a href="demo.html" class="btn btn-outline-warning">Xem thêm</a>
+		</div>
+		<!--het left-->
+		<!--right: noi dung gioi thieu-->
+		<div class="right">
+			<h4 style="color: #F8B908;">Giới thiệu Book HNT</h4>
+			<hr noshade="" style="background-color: #F8B908">
+			<p><b>Book HNT</b> là nhà sách Trực tuyến, đối tác chính thức của hơn 20 công ty, nhà phát hành sách hàng đầu Việt Nam: NXB Trẻ, NXB Kim Đồng, Nhã Nam, Alphabooks, First News,... với số lượng đầu sách đồ sộ được cập nhật liên tục hàng ngày. <br>Ngoài mua sách online tại <b>Book HNT</b>, bạn còn có rất nhiều lựa chọn quà tặng, văn phòng phẩm, đồ chơi, vật dụng gia đình, CD/DVD, công nghệ, thời trang với giá niêm yết luôn bằng hoặc thấp hơn giá thị trường giúp bạn tiết kiệm rất nhiều thời gian mua sắm.</p>
+			<img src="img/tu-sach.jpg" alt="tu-sach" width="100%">
+			<p>
+				<br>Mua sắm trực tuyến tại <b>BookHNT</b>, bạn sẽ được: <br>
+				>> Tận hưởng các chương trình ưu đãi, khuyến mãi lớn hàng tháng.<br>
+				>> Giao hàng trong vòng 48h tại Hà Nội.<br>
+				>> Miễn phí vận chuyển trong nội thành. Tìm hiểu thêm về <a href="">Phương thức vận chuyển.</a><br>
+				>> Đổi - trả hàng miễn phí trong vòng 7 ngày. Tìm hiểu thêm về <a href="">Chính sách đổi trả.</a><br>
+				>> <a href="">Phương thức thanh toán</a> an toàn, tiện lợi: Trả tiền khi nhận hàng (COD), Chuyển khoản & Internet banking, Ví điện tử.<br>
+				>> Bạn cần tư vấn sản phẩm, hoặc gặp khó khăn khi đặt hàng? Tìm hiểu phần <a href="">Trợ giúp</a> hoặc <a href="">Liên hệ</a> ngay cho chúng tôi để được giải đáp thắc mắc.
+			</p>
+			<div>
+				<p><b>DANH MỤC CÁC SẢN PHẨM TẠI BOOK HNT: </b></p>				
+				<div style="width: 20%; float: left;">
+					<a href="tieu-thuyet.html"><p>Tiểu thuyết</p></a>
+					<a href="sach-thieu-nhi.html"><p>Sách thiếu nhi</p></a>
+				</div>
+				<div style="width: 20%; float: left;">
+					<a href="truyen-tranh.html"><p>Truyện tranh</p></a>
+					<a href="sach-van-hoc.html"><p>Sách văn học</p></a>
+				</div>
+				<div style="width: 60%; float: left;">
+					<a href="tap-chi-van-phong-pham.html"><p>Tạp chí - Văn phòng phẩm</p></a>
+				</div>
+			</div>
+			<div style="width: 100%; float: left;">
+				<p><b>NHÀ SÁCH TRỰC TUYẾN BOOK HNT:</b></p>
+				<p>Cơ sở 1: Số 3, Cầu Giấy, Hà Nội. <br>Cơ sở 2: Số 1, Nguyễn Khánh Toàn, Quan Hoa, Hà Nội. <br>Email: BookHNT@gmail.com <br>Phone: 0123456789 <br>Inbox tư vấn: <a href="https://www.facebook.com/hongtam.16122001">https://www.facebook.com/hongtam.16122001</a></p>
+			</div>
+		</div>
+		<!--het right-->
+	</div>
+	<!--het body-->
+
+	<!--signature-->
+	<div class="signature">
+		<svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-pencil" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+			<path fill-rule="evenodd" d="M12.146.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-10 10a.5.5 0 0 1-.168.11l-5 2a.5.5 0 0 1-.65-.65l2-5a.5.5 0 0 1 .11-.168l10-10zM11.207 2.5L13.5 4.793 14.793 3.5 12.5 1.207 11.207 2.5zm1.586 3L10.5 3.207 4 9.707V10h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.293l6.5-6.5zm-9.761 5.175l-.106.106-1.528 3.821 3.821-1.528.106-.106A.5.5 0 0 1 5 12.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.468-.325z"/>
+		</svg>
+		<i>Tôi đã sống hàng nghìn cuộc sống.  Tôi đã yêu hàng nghìn tình yêu. Tôi đã đi trong những thế giới xa xôi và đã thấy tận cùng của thời gian. Bởi vì tôi đọc sách</i> <br>
+        <b>"__GEORGE R. R. MARTIN__"</b>
+	</div>
+	<!--het signature-->
+	<!--footer-->
+	<div class="footer">
+		<div class="footer-left">
+			<p style="font-family: Brush Script MT; font-size: x-large;">Book HNT</p>
+			<p>Cơ sở 1: Số 3, Cầu Giấy, Hà Nội <br> Cơ sở 2: Số 1, Nguyễn Khánh Toàn, Quan Hoa, Hà Nội</p>
+			<p><b>Làm bạn với Book HNT:</b></p>
+			<div>
+				<a target="_blank" href="https://www.facebook.com/profile.php?id=100010908735142">
+		          	<img src="img/fb.png">
+		        </a>
+		        <a target="_blank" href="https://www.instagram.com/dthhihi/?fbclid=IwAR07qOBe5z14WoS91I0HNkH4E4w2M_g8QN9hM6kPlGVuEeqJzTX5_RBDh2o">
+                  	<img src="img/ig.png">
+                </a>
+                <a target="_blank" href="https://mail.google.com/mail/u/0/#inbox">
+                  	<img src="img/gm.png">
+                </a>
+                <a target="_blank" href="https://www.youtube.com/watch?v=C_ceujR3Dfw&feature=youtu.be">
+                  	<img src="img/youtube.png">
+                </a>
+			</div>
+		</div>
+		<div class="footer-center">
+			<p>BookHNT.com nhận đặt hàng trực tuyến và giao hàng tận nơi trên mọi miền tổ quốc.</p>
+			<div>
+				<p>ĐKKD số 0108796796 do SKHĐT TP Hà Nội cấp ngày 24/06/2019 <br>Chịu trách nhiệm nội dung: Đặng Thị Hiền, Nguyễn Thị Quỳnh Như, Nguyễn Hồng Tâm <br>Giấy xác nhận Đăng ký hoạt động phát hành xuất bản phẩm điện tử số 8132/XN-CXBIPH do Cục Xuất Bản, In và Phát hành cấp ngày 20/11/2020.</p>
+			</div>
+			<div>
+				<div style="width: 20%; float: left;">
+					<p><b>Thông tin liên hệ:</b></p>
+				</div>
+				<div style="width: 33%; float: left;">
+					<svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-envelope" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+						<path fill-rule="evenodd" d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2zm13 2.383l-4.758 2.855L15 11.114v-5.73zm-.034 6.878L9.271 8.82 8 9.583 6.728 8.82l-5.694 3.44A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.739zM1 11.114l4.758-2.876L1 5.383v5.73z"/>
+					</svg>
+					<span>Email: BookHNT@gmail.com</span>
+				</div>
+				<div style="width:34%; float: left;">
+					<svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-telephone" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+						<path fill-rule="evenodd" d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.062a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"/>
+					</svg>
+					<span>Phone: 0123456789</span>
+				</div>
+			</div>
+		</div>
+		<div class="footer-right1">
+			<div style="width: 50%; float: left; padding-right: 10px;"><img src="img/vtp.jpg" alt="viettelpay" width="100%"></div>
+			<div style="width: 50%; float: left; position: relative; top: 5px;"><img src="img/momo.jpg" alt="momo" width="83%"></div>
+			</div>
+		</div>
+	<!--het footer-->
+</body>
+</html>

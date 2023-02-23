@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BOOKS HNT SHOP</title>
+  <link rel="stylesheet" href="trangchucss.css">
+  <link rel="stylesheet" href="trangchu.css">
+  <script type="text/javascript" src="bangchuyen.js"></script>
+  <link rel="stylesheet" href="login-signup.css">
+  <script type="text/javascript" src="login-signup.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <style>
+    *{
+      margin:0;
+      padding: 0;
+    }
+  .tieuthuyet{
+      position: relative;
+      z-index: 3;
+    }
+
+    .tieuthuyet img{
+      z-index: 1;
+      box-shadow: 4px 4px 4px #8C8B8B;
+      opacity: 90%;
+    }
+      .tieuthuyet img:hover{
+      opacity: 100%;
+      border:  solid #C8F00E;
+    }
+    .tieuthuyet a{
+      text-decoration: none;
+    }
+  .anthan{
+      position: absolute;
+      height: 55%;
+      width: 100%;
+      bottom: -20%;
+      transition:0.4s;
+      background-color: #E6E6E6;
+      opacity: 0;
+      z-index: 2;
+    }
+
+    .tieuthuyet:hover .anthan{
+      text-align: center;
+      bottom: 0%;
+      transition: 0.4s;
+      opacity: 0.8;
+      color: #010101;
+    }
+
+
+    .datmua{
+      width: 80px;
+      height: 50px;
+      border-radius: 20px;
+      display: block;
+      border: 2px solid #FF0000;
+      margin: 0 90px 0 30%;
+      color: #FF0000;
+    }
+    .datmua p{
+      font-size: 20px;
+    }
+
+    .tentruyen{
+      font-size: 20px;
+      padding: 25px 15px 0 15px;
+      font-weight: bold;
+    }
+
+
+
+  </style>
+</head>
+
+<body class="nen">
+<!--header-->
+  <div class="header">
+      <div class="up">
+          <img src="./img/khung.png"  style="width: 100%;">
+        </div>
+        <!--menu-->
+      <nav class="navbar navbar-expand-lg navbar-light bg-light " id="down"style="width: 100%;" >
+      <div class="container" >
+          <a class="navbar-brand" href="demo.html"><img src="img/photo/logo.jpg" alt="" style=" height: 60px;"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent" >
+      <ul class="navbar-nav mr-auto " id="thanh"  style="margin-left: 55px;font-weight: bold; font-size: 18px; ">
+          <li class="nav-item ">
+            <a class="nav-link" href="demo.html">Trang Chủ</a>
+          </li>
+        <li class="nav-item">
+            <a class="nav-link" href="gioi-thieu.html">Giới Thiệu</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="tro-giup.html">Trợ giúp</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="login.html" data-toggle="modal" data-target="#modal-login">Đăng Nhập</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="signup.html" data-toggle="modal" data-target="#modal-signup">Đăng Kí</a>
+        </li>
+      </ul>
+      <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      </form>
+      </div>
+      </div>
+      </nav>
+      <!--het menu-->
+  </div>
+  <!--het header-->
+
+
+<!--modal box-->
+  <!--modal box login-->
+  <div class="modal fade" id="modal-login" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="login">
+    <div class="head">
+      <h2 style="text-align: center;">Đăng nhập</h2>
+      <hr width="80%">
+    </div>
+    <div class="content1">
+      <form action="">
+        <div class="input">
+          <p>Số điện thoại/Email</p>
+          <input type="text" placeholder="Nhập số điện thoại hoặc Email">
+          <p>Mật khẩu</p>
+          <input type="password" placeholder="Nhập mật khẩu" id="password" name="password">
+          <span onclick="show()" class="showPassword">Hiện</span>
+        </div>
+        <div class="forgot-password">
+          <a href="forgot-password.html">Quên mật khẩu?</a>
+        </div>
+        <div style="text-align: center">
+          <button class="button-submit">Đăng nhập</button>
+          <button class="button-cancel">Bỏ qua</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+  <!--het modal box login-->
+<!--modal box signup-->
+  <div class="modal fade" id="modal-signup" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="login">
+    <div class="head">
+      <h2 style="text-align: center;">Đăng ký</h2>
+      <hr width="80%">
+    </div>
+    <div class="content1">
+      <form action="">
+        <div class="input">
+          <p>Số điện thoại/Email</p>
+          <input type="text" placeholder="Nhập số điện thoại hoặc Email">
+          <p>Mật khẩu</p>
+          <input type="password" placeholder="Nhập mật khẩu" id="password" name="password1">
+          <span onclick="show()" class="showPassword">Hiện</span>
+          <p>Nhập lại mật khẩu</p>
+          <input type="password" placeholder="Nhập lại mật khẩu" id="password" name="password2">
+          <span onclick="show()" class="showPassword">Hiện</span>
+        </div>
+        <div class="question">
+          <table cellpadding="5px">
+            <tr>
+              <td>
+                <input type="checkbox">
+              </td>
+              <td>
+                <span>Tôi đồng ý với các chính sách bảo mật của HNTBook.</span>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="button" style="text-align: center">
+          <button class="button-submit">
+            <span>Đăng ký</span>
+          </button>
+          <br>
+          <button class="button-cancel">
+            <span>Bỏ qua</span>
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+  <!--het modal box signup-->
+<!--het modal box-->
+
+
+<div class="container-fluid mt-3">
+
+ <div class="row" style="border-bottom: 1px solid gray;">
+  <div class="col-xl-3 col-md-6 pl-5 pt-3" id="trai" >
+    <ul>
+      <li style="list-style: none;"><a href="" style="font-size: 20px;"><img src="img/menu.png" style="vertical-align: middle; height: 24px; text-decoration: none;"> Danh mục sản phẩm</a></li>
+    </ul>
+    <table class="bangsp" style="margin-left: 40px;">
+      <tr><td><a href="tieu_thuyet.html" target="_blank" > Tiểu Thuyết</a></td></tr>
+      <tr><td><a href="sach_thieu_nhi.html" target="_blank"> Sách thiếu nhi</a></td></tr>
+      <tr><td><a href="truyen_tranh.html" target="_blank" > Truyện Tranh</a></td></tr>
+      <tr><td><a href="van_hoc.html" target="_blank"> Sách Văn Học</a></td></tr>
+      <tr><td><a href="tap_chi-van_phong_pham.html"> Tạp Chí-Văn Phòng Phẩm </a></td></tr>
+    </table>
+  </div><!--het col-4-->
+  <div class="col-xl-9 mt-3" id="phai" style="float: left;" >
+    <img src="img/bia6.jpg" id="img" onclick="changeImage() " style="width: 100%; border-radius: 5px; margin-bottom: 30px; ">
+  </div><!--het col-8-->
+</div><!--het row-->
+
+
+
+<!--KHUNG 1 TIEU THUYẾT-->
+ <h5 style="margin-left: 155px; font-size: 20px;"><a href="tieu_thuyet.html " target="_blank"> Tiểu Thuyết  </a><img src="img/moi.gif" style="margin-bottom: 10px;"></h5>
+<div class="container" >
+
+  <div class="row mb-3 " >
+   <div class="col-sm-3 tieuthuyet">
+     <div class="card">
+      <img src="img/20.jpg" class="card-img-top" alt="...">
+      <div class="anthan">
+            <p class="tentruyen">tôi bị bố bắt cóc</p>
+                <p>Thể loại : tiểu thuyết</p>
+             <p class="datmua">100.000</p>
+          </div>
+
+    </div>
+  </div>
+<div class="col-sm-3 tieuthuyet">
+ <div class="card">
+  <img src="img/99.jpg" class="card-img-top" alt="...">
+    <div class="anthan">
+          <p class="tentruyen">năm tháng vội vã</p>
+              <p>Thể loại : tiểu thuyết</p>
+           <p class="datmua">120.000</p>
+        </div>
+</div>
+</div>
+<div class="col-sm-3 tieuthuyet">
+<div class="card">
+<img src="img/21.jpg" class="card-img-top" alt="...">
+  <div class="anthan">
+          <p class="tentruyen">Đông cung</p>
+              <p>Thể loại : tiểu thuyết</p>
+           <p class="datmua">200.000</p>
+        </div>
+
+</div>
+</div>
+<div class="col-sm-3 tieuthuyet">
+<div class="card">
+<img src="img/10.jpg" class="card-img-top" alt="...">
+<div class="anthan">
+          <p class="tentruyen">Thất tịch không mưa</p>
+              <p>Thể loại : tiểu thuyết</p>
+           <p class="datmua">99.000</p>
+        </div>
+</div>
+</div>
+
+</div><!--  het row -->
+</div ><!--  het tieu thuyet -->
+</br>
+<hr>
+<!--KHUNG 2 TRUYỆN THIẾU NHI-->
+
+<h5 style="margin-left: 155px; font-size: 20px;"><a href="sach_thieu_nhi.html" target="_blank"> Sách Thiếu Nhi </a> <img src="img/moi.gif" style="margin-bottom: 10px;"></h5><!--tieude-->
+<div class="container-fluid mb-4" >
+  <div class="row">
+    <div class="col-sm-4 ">
+      <div class="tieuthuyet" > 
+        <a href=" "><img src="img/44.jpg"  class="img-fluid" ></a>
+        <div class="anthan">
+          <p class="tentruyen">Mười vạn câu hỏi vì sao</p>
+              <p>Thể loại : Sách thiếu nhi</p>
+              <span>Giá : 112.000đ</span>
+        </div>
+      </div><!--het tieuthuyet-->
+    </div><!--  het col -->
+    <div class="col-sm-4 mt-2 ">
+      <div class="card mb-3 khungnho" style="max-width: 540px;">
+        <div class="row no-gutters">
+          <div class="col-md-4">
+            <img src="img/13.jpg" class="card-img" alt="...">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title"><a href=" ">
+               Không Chỉ Là Phù Thủy</a></h5>
+              <p class="card-text"> đây là cuốn sách dành cho thiếu nhi mà  [đọc tiếp..]</p>
+              <span>Giá 72.000</span>
+            </div>
+          </div>
+        </div>
+      </div><!--  het card -->
+      <div class="card mb-3 khungnho" style="max-width: 540px;">
+        <div class="row no-gutters">
+          <div class="col-md-4">
+            <img src="img/30.jpg"  class="card-img" alt="...">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title"><a href=""> Ai từng Là Con Nít</a></h5>
+              <p class="card-text">cuốn sách này đem lại niềm vui , tiếng cười [đọc tiếp...]</p>
+              <span>Giá : 169.000</span>
+            </div>
+          </div>
+        </div>
+      </div><!--  het card -->
+    </div><!--  het col -->
+    <hr>
+
+    <div class="col-sm-4 mt-2">
+      <div class="card mb-3 khungnho" style="max-width: 540px;">
+        <div class="row no-gutters">
+          <div class="col-md-4">
+            <img src="img/40.jpg" class="card-img" alt="...">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title"><a href=""> Tự Nảy Mầm Tự Vươn Lên</a></h5>
+              <p class="card-text">Cuốn sách này giúp rèn luyện cho trẻ những[đọc tiếp...]</p>
+              <span>Giá :90.000</span>
+            </div>
+          </div>
+        </div>
+      </div><!--  het card -->
+      <div class="card mb-3 khungnho" style="max-width: 540px;">
+        <div class="row no-gutters">
+          <div class="col-md-4">
+            <img src="img/16.jpg" class="card-img" alt="...">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title"><a href=" "> Tập Tô Màu Trẻ Em</a></h5>
+              <p class="card-text">rèn luyện kỹ năng cho trẻ</p>
+              <span>Giá : 56.000</span>
+            </div>
+          </div>
+        </div>
+      </div><!--  het card -->
+    </div><!--  het col -->
+   
+      </div><!--  het row -->
+</div><!--  het container -->
+
+<!--TRUYỆN TRANH -->
+<hr>
+<h5 style="margin-left: 155px; font-size: 20px;"><a href="truyen_tranh.html">Truyện Tranh </a> <img src="img/moi.gif" style="margin-bottom: 10px;"></h5>
+<div class="comic-box" style="background-image: url(img/galaxy.jpg);">
+ <div class="container" >
+   
+       <div class="row">
+         <p style="font-size: 21px; color: white; width: 200px; height: 90px; padding-top:20px;border: 1px solid white;"> TRUYỆN TRANH<p>
+          <p style="color: white; ">
+          "TỪ ĐIỂN TRANH VỀ RAU - CỦ - QUẢ - HOA, CUỐN SÁCH GIÚP CÁC BÉ SẼ TIẾP THU NHỮNG KIẾN THỨC PHONG PHÚ VỀ MÔI TRƯỜNG XUNG QUANH MỘT CÁCH TỰ NHIÊN NHƯNG KHÔNG KÉM PHẦN HỨNG THÚ VÀ BẠN CŨNG SẼ CÓ NHỮNG GIÂY PHÚT VUI ĐÙA CÙNG BÉ.""
+        </p>
+       </div>
+
+       <div class="row ">
+           <div class="col-sm-3 tieuthuyet">
+              <a href=" "><img src="img/66.jpg" style=" width: 250px;height: 350px; border-radius: 25px;" class ="img-fluid"></a>
+           </div>
+           <div class="col-sm-3 tieuthuyet">
+              <a href=" "><img src="img/69.jpg" style=" width: 250px;height: 350px;  border-radius: 25px;"class="img-fluid"></a>
+           </div>
+           <div class="col-sm-3 tieuthuyet">
+              <a href=" "><img src="img/67.jpg" style=" width: 250px;height: 350px; border-radius: 25px;" class="img-fluid"></a>
+           </div>
+           <div class="col-sm-3 tieuthuyet">
+              <a href=" "><img src="img/68.jpg" style=" width: 250px;height: 350px; border-radius: 25px;"class="img-fluid"></a>
+           </div>
+       </div>
+       <div class="row">
+         <col-12></br></col-12>
+       </div>
+   
+ </div><!--  het container -->
+</div><!--comic-box-->
+
+<!--VAN HOC -->
+
+
+ <div class="container-fluid mb-4">
+  <h5 style="margin-left: 155px; font-size: 20px;"><a href="van_hoc.html"> Sách Văn Học </a> <img src="img/dayngang.gif" style="margin-bottom: 10px;"></h5>
+  <div class="row">
+    <div class="col-sm-4 ">
+      <div class="tieuthuyet" > 
+        <a href=" "><img src="img/vh5.jpg" class="img-fluid"></a>
+         <div class="anthan">
+          <p class="tentruyen">Những ngôi sao trên bầu trời thành phố</p>
+          <span > Giá :54.000đ</span>
+        </div>  
+      </div><!--het tieuthuyet-->
+    </div><!--  het col -->
+    <div class="col-sm-4 mt-2">
+      <div class="card mb-3 khungnho" style="max-width: 540px;">
+        <div class="row no-gutters">
+          <div class="col-md-4">
+            <img src="img/vh1.jpg" class="card-img" alt="...">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title"><a href=""> Số Đỏ</a></h5>
+              <p class="card-text">Tác Giả : Vũ Trọng Phụng</p>
+              <span>Giá : 71.000</span>
+            </div>
+          </div>
+        </div>
+      </div><!--  het card -->
+      <div class="card mb-3 khungnho" style="max-width: 540px;">
+        <div class="row no-gutters">
+          <div class="col-md-4">
+            <img src="img/vh2.jpg" class="card-img" alt="...">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title"><a href=""> Tôi Thấy Hoa Vàng Trên Cỏ Xanh</a></h5>
+              <p class="card-text">Tác giả : Nguyễn Nhật Ánh</p>
+              <span>Giá : 54.000</span>
+            </div>
+          </div>
+        </div>
+      </div><!--  het card -->
+    </div><!--  het col -->
+
+    <div class="col-sm-4 mt-2">
+      <div class="card mb-3 khungnho" style="max-width: 540px;">
+        <div class="row no-gutters">
+          <div class="col-md-4">
+            <img src="img/vh3.jpg" class="card-img" alt="...">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title"><a href=" "> Chí Phèo</a></h5>
+              <p class="card-text">Tác giả : Nam Cao</p>
+              <span>Giá : 81.000</span>
+            </div>
+          </div>
+        </div>
+      </div><!--  het card -->
+      <div class="card mb-3 khungnho" style="max-width: 540px;">
+        <div class="row no-gutters">
+          <div class="col-md-4">
+            <img src="img/vh4.jpg" class="card-img" alt="...">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title"><a href=""> Truyện Kiều</a> </h5>
+              <p class="card-text">Tác Giả :Nguyễn Du</p>
+              <span>Giá : 79.000</span>
+            </div>
+          </div>
+        </div>
+      </div><!--  het card -->
+    </div><!--  het col -->
+   
+      </div><!--  het row -->
+</div><!--  het container -->
+
+<!--BANG TRUOT -->
+<div class="thanhtruot">
+   <div class="container mb-4">
+    <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+        <img src="img/vatpham.jpg" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="img/vp1.jpg" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="img/vp2.jpg" class="d-block w-100" alt="...">
+    </div>
+  </div>
+</div>
+   </div>
+</div>
+
+
+<!-- VAN PHONG PHAM -->
+
+ <div class="container-fluid mb-4">
+  <h5 style="margin-left: 155px; font-size: 20px;"><a href="tap_chi-van_phong_pham.html"> Tạp Chí-Văn Phòng Phẩm </a> <img src="img/dayngang.gif" style="margin-bottom: 10px;"></h5>
+  <div class="row">
+   
+    <div class="col-sm-4 mt-2">
+      <div class="card mb-3 khungnho" style="max-width: 540px;">
+        <div class="row no-gutters">
+          <div class="col-md-4">
+            <img src="img/vp5.png" class="card-img" alt="...">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title"><a href=""> Mũ cá tính cho những cô nàng bánh bèo</a></h5>
+               <span>giá: 130.000</span></br>giá : <del>136.000</del>
+            </div>
+          </div>
+        </div>
+      </div><!--  het card -->
+      <div class="card mb-3 khungnho" style="max-width: 540px;">
+        <div class="row no-gutters">
+          <div class="col-md-4">
+            <img src="img/vp4.jpg"  class="card-img" alt="...">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title"><a href=""> Gấu ôm cute</a></h5>
+              <span>giá: 200.000</span></br>giá : <del>236.000</del>
+            </div>
+          </div>
+        </div>
+      </div><!--  het card -->
+    </div><!--  het col -->
+
+    <div class="col-sm-4 mt-2">
+      <div class="card mb-3 khungnho" style="max-width: 540px;">
+        <div class="row no-gutters">
+          <div class="col-md-4">
+            <img src="img/vp6.jpg" class="card-img" alt="...">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title"><a href=""> bút bi cực xinh</a></h5>
+              <span>giá: 12.000/c</span></br>giá : <del>14.000/c</del>
+            </div>
+          </div>
+        </div>
+      </div><!--  het card -->
+      <div class="card mb-3 khungnho" style="max-width: 540px;">
+        <div class="row no-gutters">
+          <div class="col-md-4">
+            <img src="img/vp7.jpg" class="card-img" alt="...">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title"><a href=""> Túi xách cực xinh cho các nàng đi dạo</a></h5>
+             <span>giá: 100.000</span></br>giá : <del>106.000</del>
+            </div>
+          </div>
+        </div>
+      </div><!--  het card -->
+    </div><!--  het col -->
+     <div class="col-sm-4 ">
+      <div class="tieuthuyet" > 
+        <a href=" "><img src="img/tapchi1.jpg" style="height: 455px; width: 100%" class="img-fluid"></a>
+        <div class="anthan">
+          <p class="tentruyen">Tạp chí tháng 9</p>
+          <span > Giá :54.000đ</span>
+        </div> 
+      </div><!--het tieuthuyet-->
+    </div><!--  het col -->
+   
+      </div><!--  het row -->
+</div><!--  het container -->
+
+<!--signature-->
+  <div class="signature">
+    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-pencil" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+      <path fill-rule="evenodd" d="M12.146.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-10 10a.5.5 0 0 1-.168.11l-5 2a.5.5 0 0 1-.65-.65l2-5a.5.5 0 0 1 .11-.168l10-10zM11.207 2.5L13.5 4.793 14.793 3.5 12.5 1.207 11.207 2.5zm1.586 3L10.5 3.207 4 9.707V10h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.293l6.5-6.5zm-9.761 5.175l-.106.106-1.528 3.821 3.821-1.528.106-.106A.5.5 0 0 1 5 12.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.468-.325z"/>
+    </svg>
+    <i>Tôi đã sống hàng nghìn cuộc sống.  Tôi đã yêu hàng nghìn tình yêu. Tôi đã đi trong những thế giới xa xôi và đã thấy tận cùng của thời gian. Bởi vì tôi đọc sách</i> <br>
+        <b>"__GEORGE R. R. MARTIN__"</b>
+  </div>
+  <!--het signature-->
+  <!--footer-->
+  <div class="footer">
+    <div class="footer-left">
+      <p style="font-family: Brush Script MT; font-size: x-large;">Book HNT</p>
+      <p>Cơ sở 1: Số 3, Cầu Giấy, Hà Nội <br> Cơ sở 2: Số 1, Nguyễn Khánh Toàn, Quan Hoa, Hà Nội</p>
+      <p><b>Làm bạn với Book HNT:</b></p>
+      <div>
+        <a target="_blank" href="https://www.facebook.com/profile.php?id=100010908735142">
+                <img src="img/fb.png">
+            </a>
+            <a target="_blank" href="https://www.instagram.com/dthhihi/?fbclid=IwAR07qOBe5z14WoS91I0HNkH4E4w2M_g8QN9hM6kPlGVuEeqJzTX5_RBDh2o">
+                    <img src="img/ig.png">
+                </a>
+                <a target="_blank" href="https://mail.google.com/mail/u/0/#inbox">
+                    <img src="img/gm.png">
+                </a>
+                <a target="_blank" href="https://www.youtube.com/watch?v=C_ceujR3Dfw&feature=youtu.be">
+                    <img src="img/youtube.png">
+                </a>
+      </div>
+    </div>
+    <div class="footer-center">
+      <p>BookHNT.com nhận đặt hàng trực tuyến và giao hàng tận nơi trên mọi miền tổ quốc.</p>
+      <div>
+        <p>ĐKKD số 0108796796 do SKHĐT TP Hà Nội cấp ngày 24/06/2019 <br>Chịu trách nhiệm nội dung: Đặng Thị Hiền, Nguyễn Thị Quỳnh Như, Nguyễn Hồng Tâm <br>Giấy xác nhận Đăng ký hoạt động phát hành xuất bản phẩm điện tử số 8132/XN-CXBIPH do Cục Xuất Bản, In và Phát hành cấp ngày 20/11/2020.</p>
+      </div>
+      <div>
+        <div style="width: 20%; float: left;">
+          <p><b>Thông tin liên hệ:</b></p>
+        </div>
+        <div style="width: 33%; float: left;">
+          <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-envelope" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2zm13 2.383l-4.758 2.855L15 11.114v-5.73zm-.034 6.878L9.271 8.82 8 9.583 6.728 8.82l-5.694 3.44A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.739zM1 11.114l4.758-2.876L1 5.383v5.73z"/>
+          </svg>
+          <span>Email: BookHNT@gmail.com</span>
+        </div>
+        <div style="width:34%; float: left;">
+          <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-telephone" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.062a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"/>
+          </svg>
+          <span>Phone: 0123456789</span>
+        </div>
+      </div>
+    </div>
+    <div class="footer-right1">
+      <div style="width: 50%; float: left; padding-right: 10px;"><img src="img/vtp.jpg" alt="viettelpay" width="100%"></div>
+      <div style="width: 50%; float: left; position: relative; top: 5px;"><img src="img/momo.jpg" alt="momo" width="83%"></div>
+    </div>
+  <!--het footer-->
+
+</div>
+</body>
+</html>

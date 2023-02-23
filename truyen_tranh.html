@@ -1,0 +1,890 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Truyện tranh</title>
+  <link rel="stylesheet" href="trangchu.css">
+  <link rel="stylesheet" href="login-signup.css">
+  <script type="text/javascript" src="login-signup.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <style type="text/css">
+      *{
+       margin: 0;
+      }
+      #down{
+        position: -webkit-sticky; 
+        position: fixed;
+        top: 0;
+       z-index: 1;
+       }
+        ul#thanh li a:hover{
+        color: red;
+      }
+      .menu{
+       width: 100%;
+       height: auto;
+       border-bottom: 2px solid #3AD096;
+      }
+      #divloai{
+        background-color: #F2EDED;
+        width: 25% ; 
+        float: left ;
+      }
+      span#phanloai{
+        margin-left: 10px;
+       font-size: 25px;
+       width: 30% ; 
+       color : #81DDF8;
+       padding-left: 70px;
+      }
+      li{
+        font-size: 20px;
+        color: #81DDF8;
+      }
+      #div2{
+        width: 60%;
+        float: left;
+        margin-left: 50px;
+      }
+      img#anh{
+        width: 200px;
+        height: 235px;
+      }
+      img:hover#anh{
+        width: 230px;
+        height: 265px;
+      }
+      img:hover{
+
+      }
+      h5{
+         argin-left: 10px;
+       font-size: 22px;
+       color : #81DDF8;
+      }
+      a#title{
+        margin-left: 10px;
+        font-size: 19px;
+        color: #FB9D6F ;
+      }
+      a#read
+      {
+        margin-left: 10px;
+        background-color: red;
+        color: white;
+        font-size: 15px;
+        padding : 4px;
+      }
+      pre{
+        margin-left: 10px;
+        font-size: 15px; 
+
+      }
+      #div3{
+        background-color: red;
+        width: 25% ; 
+        margin-top: 500px;
+        float: left ;
+      }
+    </style>
+</head>
+<body>
+  <!--header-->
+  <div class="header">
+      <div class="up">
+          <img src="./img/khung.png"  style="width: 100%;">
+        </div>
+        <!--menu-->
+      <nav class="navbar navbar-expand-lg navbar-light bg-light " id="down"style="width: 100%;" >
+      <div class="container" >
+          <a class="navbar-brand" href=" demo.html"><img src="img/photo/logo.jpg" alt="" style="height: 60px;"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent" >
+      <ul class="navbar-nav mr-auto " id="thanh"  style="margin-left: 55px;font-weight: bold; font-size: 18px; ">
+          <li class="nav-item ">
+            <a class="nav-link" href="demo.html">Trang Chủ</a>
+          </li>
+        <li class="nav-item">
+            <a class="nav-link" href="gioi-thieu.html">Giới Thiệu</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="tro-giup.html">Trợ giúp</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="login.html" data-toggle="modal" data-target="#modal-login">Đăng Nhập</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="signup.html" data-toggle="modal" data-target="#modal-signup">Đăng Kí</a>
+        </li>
+      </ul>
+      <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      </form>
+      </div>
+      </div>
+      </nav>
+      <!--het menu-->
+  </div>
+  <!--het header-->
+
+<!--modal box-->
+  <!--modal box login-->
+  <div class="modal fade" id="modal-login" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="login">
+    <div class="head">
+      <h2 style="text-align: center;">Đăng nhập</h2>
+      <hr width="80%">
+    </div>
+    <div class="content1">
+      <form action="">
+        <div class="input">
+          <p>Số điện thoại/Email</p>
+          <input type="text" placeholder="Nhập số điện thoại hoặc Email">
+          <p>Mật khẩu</p>
+          <input type="password" placeholder="Nhập mật khẩu" id="password" name="password">
+          <span onclick="show()" class="showPassword">Hiện</span>
+        </div>
+        <div class="forgot-password">
+          <a href="forgot-password.html">Quên mật khẩu?</a>
+        </div>
+        <div style="text-align: center">
+          <button class="button-submit">Đăng nhập</button>
+          <button class="button-cancel">Bỏ qua</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+  <!--het modal box login-->
+  <!--modal box signup-->
+  <div class="modal fade" id="modal-signup" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="login">
+    <div class="head">
+      <h2 style="text-align: center;">Đăng ký</h2>
+      <hr width="80%">
+    </div>
+    <div class="content1">
+      <form action="">
+        <div class="input">
+          <p>Số điện thoại/Email</p>
+          <input type="text" placeholder="Nhập số điện thoại hoặc Email">
+          <p>Mật khẩu</p>
+          <input type="password" placeholder="Nhập mật khẩu" id="password" name="password1">
+          <span onclick="show()" class="showPassword">Hiện</span>
+          <p>Nhập lại mật khẩu</p>
+          <input type="password" placeholder="Nhập lại mật khẩu" id="password" name="password2">
+          <span onclick="show()" class="showPassword">Hiện</span>
+        </div>
+        <div class="question">
+          <table cellpadding="5px">
+            <tr>
+              <td>
+                <input type="checkbox">
+              </td>
+              <td>
+                <span>Tôi đồng ý với các chính sách bảo mật của HNTBook.</span>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="button" style="text-align: center">
+          <button class="button-submit">
+            <span>Đăng ký</span>
+          </button>
+          <br>
+          <button class="button-cancel">
+            <span>Bỏ qua</span>
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+  <!--het modal box signup-->
+<!--het modal box-->
+
+
+<!-- BODY -->
+<div id="divloai">
+      <br>
+      <span id="phanloai">THỂ LOẠI</span>
+      <br>
+      <ul>
+        <hr>
+        <li> <a href="#Truyện_nt">Truyện tranh ngôn tình</a></li>
+        <hr>
+        <li><a href="#Truyện_dm">Truyện tranh đam mỹ</a> </li>
+        <hr>
+        <li><a href="#Truyện_bh">Truyện tranh bách hợp</a> </li>
+        <hr>
+        <li><a href="#Truyện_xk">Truyện tranh xuyên không</a> </li>
+        <hr>
+      </ul>
+
+ <!--Truyện được yêu thích  -->
+  <div class="left">
+      <h5>Những Truyện Được Yêu Thích</h5>
+      <img src="img/truyentranh_nt/nangmaikhongdepbangem.jpg" alt="" style="margin-bottom: 10%; margin-left: 20px;margin-right: 10px;height: 230px; width: 280px">
+      <img src="img/truyentranh_nt/thieusoaivongaitron.jpg" alt="" style="margin-bottom: 10%; margin-left: 20px;margin-right: 10px;height: 230px; width: 280px">
+      <img src="img/truyentranh_bh/viyeumaden.jpg" alt="" style="margin-bottom: 10%; margin-left: 20px;margin-right: 10px;height: 230px; width: 280px">
+      <img src="img/truyentranh_dm/lily.jpg" alt="" style="margin-bottom: 10%; margin-left: 20px;margin-right: 10px;height: 230px; width: 280px">
+      <img src="img/truyentranh_bh/duongrengang.jpg" alt="" style="margin-bottom: 10%; margin-left: 20px;margin-right: 10px;height: 230px; width: 280px">
+      <button class="xem-them"><a href=""><span>Xem thêm</span></a>
+    </div> 
+</div>
+
+<!-- DANH SÁCH TRUYỆN TRANH-->
+
+    <div id="div2">
+      <br>
+<!-- DANH SÁCH TRUYỆN NGÔN TÌNH -->     
+      <h5 id="Truyện_nt" style="font-size: 20px;">Truyện Ngôn Tình  <img src="img/moi.gif"></h5>
+      <hr>
+      <table>
+       <tr>
+         <th>
+          <a href=""><img id="anh" src="img/truyentranh_nt/badaotongtai.jpg"></a>
+         </th>
+         <th>
+           <a  id="title" href=""> Bá đạo tổng tài</a>
+           <pre>
+Tác giả : Sâu gạo
+Số chương : 211
+Tình trạng : Full 
+           </pre>
+           <a id="read" href="">ĐỌC THỬ</a>
+           <a id="read" href=""> Mua ngay : 1.500.000 VNĐ</a>
+         </th>
+       </tr>
+     </table>
+     <hr>
+
+     <table>
+       <tr>
+         <th>
+          <a href=""><img id="anh" src="img/truyentranh_nt/diai.jpg"></a>
+         </th>
+         <th>
+           <a  id="title" href=""> I Love You</a>
+           <pre>
+Tác giả : Thạch Lam
+Số chương : 211
+Tình trạng : Full 
+           </pre>
+           <a id="read" href="">ĐỌC THỬ</a>
+           <a id="read" href=""> Mua ngay : 160.000 VNĐ</a>
+         </th>
+       </tr>
+     </table>
+     <hr>
+
+     <table>
+       <tr>
+         <th>
+          <a href=""><img id="anh" src="img/truyentranh_nt/nangmaikhongdepbangem.jpg"></a>
+         </th>
+         <th>
+           <a  id="title" href=""> Nắng mai không đẹp bằng em</a>
+           <pre>
+Tác giả : Xuân Diệu
+Số chương : 192
+Tình trạng : Đang cập nhật 
+           </pre>
+           <a id="read" href="">ĐỌC THỬ</a>
+           <a id="read" href=""> Mua ngay : 192.000 VNĐ</a>
+         </th>
+       </tr>
+     </table>
+     <hr>
+
+     <table>
+       <tr>
+         <th>
+          <a href=""><img id="anh" src="img/truyentranh_nt/phapycuongphi.jpg"></a>
+         </th>
+         <th>
+           <a  id="title" href=""> Pháp y cuồng phi</a>
+           <pre>
+Tác giả : Nguyễn Hồng Tâm
+Số chương : 102
+Tình trạng : Full 
+           </pre>
+           <a id="read" href="">ĐỌC THỬ</a>
+           <a id="read" href=""> Mua ngay : 60.000 VNĐ</a>
+         </th>
+       </tr>
+     </table>
+     <hr>
+
+     <table>
+       <tr>
+         <th>
+          <a href=""><img id="anh" src="img/truyentranh_nt/thieusoaivongaitron.jpg"></a>
+         </th>
+         <th>
+           <a  id="title" href=""> Thiếu soái vợ ngài lại trốn</a>
+           <pre>
+Tác giả : Diệp Lạc Vô Tâm
+Số chương : 344
+Tình trạng : Full 
+           </pre>
+           <a id="read" href="">ĐỌC THỬ</a>
+           <a id="read" href=""> Mua ngay : 144.000 VNĐ</a>
+         </th>
+       </tr>
+     </table>
+     <hr>
+
+     <table>
+       <tr>
+         <th>
+          <a href=""><img id="anh" src="img/truyentranh_nt/tinhdaulancuoi.jpg"></a>
+         </th>
+         <th>
+           <a  id="title" href=""> Tình đầu lần cuối</a>
+           <pre>
+Tác giả : Nguyễn Nhật Ánh
+Số chương : 456
+Tình trạng : Full 
+           </pre>
+           <a id="read" href="">ĐỌC THỬ</a>
+           <a id="read" href=""> Mua ngay : 90.000 VNĐ</a>
+         </th>
+       </tr>
+     </table>
+     <hr>
+
+     <table>
+       <tr>
+         <th>
+          <a href=""><img id="anh" src="img/truyentranh_nt/tongtai.jpg"></a>
+         </th>
+         <th>
+           <a  id="title" href=""> Tổng tài tại thượng</a>
+           <pre>
+Tác giả : Cố Mạn
+Số chương : 312
+Tình trạng : Đang cập nhật 
+           </pre>
+           <a id="read" href="">ĐỌC THỬ</a>
+           <a id="read" href=""> Mua ngay : 1.500.000 VNĐ</a>
+         </th>
+       </tr>
+     </table>
+     <hr>
+
+     <table>
+       <tr>
+         <th>
+          <a href=""><img id="anh" src="img/truyentranh_nt/nganvanbaytinh.jpg"></a>
+         </th>
+         <th>
+           <a  id="title" href=""> Ngàn vạn bẫy tình</a>
+           <pre>
+Tác giả : Tần Thanh
+Số chương : 211
+Tình trạng : Full 
+           </pre>
+           <a id="read" href="">ĐỌC THỬ</a>
+           <a id="read" href=""> Mua ngay : 299.000 VNĐ</a>
+         </th>
+       </tr>
+     </table>
+     <hr>
+
+ <!-- DANH SÁCH TRUYỆN ĐAN MỸ -->     
+      <h5 id="Truyện_dm" style="font-size: 20px;">Truyện Đam Mỹ  <img src="img/moi.gif"></h5> <p><a href="#Truyện_nt">Về đầu trang</a></p>
+      <hr>
+      <table>
+       <tr>
+         <th>
+          <a href=""><img id="anh" src="img/truyentranh_dm/anhvaem.jpg"></a>
+         </th>
+         <th>
+           <a  id="title" href="">Anh và em cùng chung sống</a>
+           <pre>
+Tác giả : Tiểu Yến Tử
+Số chương : 119
+Tình trạng : Đang cập nhật 
+           </pre>
+           <a id="read" href="">ĐỌC THỬ</a>
+           <a id="read" href=""> Mua ngay : 469.000 VNĐ</a>
+         </th>
+       </tr>
+     </table>
+     <hr>
+
+     <table>
+       <tr>
+         <th>
+          <a href=""><img id="anh" src="img/truyentranh_dm/brotherly.jpg"></a>
+         </th>
+         <th>
+           <a  id="title" href="">Brotherly</a>
+           <pre>
+Tác giả : Tiểu Vy
+Số chương : 432
+Tình trạng : Đang cập nhật 
+           </pre>
+           <a id="read" href="">ĐỌC THỬ</a>
+           <a id="read" href=""> Mua ngay : 199.000 VNĐ</a>
+         </th>
+       </tr>
+     </table>
+     <hr>
+
+      <table>
+       <tr>
+         <th>
+          <a href=""><img id="anh" src="img/truyentranh_dm/lily.jpg"></a>
+         </th>
+         <th>
+           <a  id="title" href="">Lily</a>
+           <pre>
+Tác giả : Nguyễn Khang
+Số chương : 132
+Tình trạng : Full 
+           </pre>
+           <a id="read" href="">ĐỌC THỬ</a>
+           <a id="read" href=""> Mua ngay : 299.000 VNĐ</a>
+         </th>
+       </tr>
+     </table>
+     <hr>
+
+      <table>
+       <tr>
+         <th>
+          <a href=""><img id="anh" src="img/truyentranh_dm/tinhyeubattan.jpg"></a>
+         </th>
+         <th>
+           <a  id="title" href="">Tình yêu bất tận</a>
+           <pre>
+Tác giả : Dương Tử
+Số chương : 32
+Tình trạng : Đang cập nhật 
+           </pre>
+           <a id="read" href="">ĐỌC THỬ</a>
+           <a id="read" href=""> Mua ngay : 199.000 VNĐ</a>
+         </th>
+       </tr>
+     </table>
+     <hr>
+
+      <table>
+       <tr>
+         <th>
+          <a href=""><img id="anh" src="img/truyentranh_dm/loptruongtothichcau.jpg"></a>
+         </th>
+         <th>
+           <a  id="title" href="">Lớp trưởng tớ thích cậu</a>
+           <pre>
+Tác giả : Dương Mịch
+Số chương :104
+Tình trạng : Đang cập nhật 
+           </pre>
+           <a id="read" href="">ĐỌC THỬ</a>
+           <a id="read" href=""> Mua ngay : 199.000 VNĐ</a>
+         </th>
+       </tr>
+     </table>
+     <hr>
+
+      <table>
+       <tr>
+         <th>
+          <a href=""><img id="anh" src="img/truyentranh_dm/staywithme.jpg"></a>
+         </th>
+         <th>
+           <a  id="title" href="">Stay with me</a>
+           <pre>
+Tác giả : Trịnh Sảng
+Số chương : 478
+Tình trạng : Đang cập nhật 
+           </pre>
+           <a id="read" href="">ĐỌC THỬ</a>
+           <a id="read" href=""> Mua ngay : 133.000 VNĐ</a>
+         </th>
+       </tr>
+     </table>
+     <hr>
+
+      <table>
+       <tr>
+         <th>
+          <a href=""><img id="anh" src="img/truyentranh_dm/mongbathang3.jpg"></a>
+         </th>
+         <th>
+           <a  id="title" href="">Mồng ba thang ba</a>
+           <pre>
+Tác giả : Bành Tiểu Nhiễm
+Số chương : 104
+Tình trạng : Đang cập nhật 
+           </pre>
+           <a id="read" href="">ĐỌC THỬ</a>
+           <a id="read" href=""> Mua ngay : 199.000 VNĐ</a>
+         </th>
+       </tr>
+     </table>
+     <hr>
+
+      <table>
+       <tr>
+         <th>
+          <a href=""><img id="anh" src="img/truyentranh_dm/nguyenvinguoi.jpg"></a>
+         </th>
+         <th>
+           <a  id="title" href="">Nguyện vì người làm tất cả</a>
+           <pre>
+Tác giả : Hạ lan
+Số chương : 456
+Tình trạng : Đang cập nhật 
+           </pre>
+           <a id="read" href="">ĐỌC THỬ</a>
+           <a id="read" href=""> Mua ngay : 199.000 VNĐ</a>
+         </th>
+       </tr>
+     </table>
+     <hr>
+
+ <!-- DANH SÁCH TRUYỆN BÁCH HỢP -->     
+      <h5 id="Truyện_bh" style="font-size: 20px;">Truyện Bách Hợp  <img src="img/moi.gif"></h5> <p><a href="#Truyện_nt">Về đầu trang</a></p>
+      <hr>
+      <table>
+       <tr>
+         <th>
+          <a href=""><img id="anh" src="img/truyentranh_bh/bimatngotngao.jpg"></a>
+         </th>
+         <th>
+           <a  id="title" href="">Bí mật ngọt ngào</a>
+           <pre>
+Tác giả : Nguyễn Nhật Ánh
+Số chương : 119
+Tình trạng : Đang cập nhật 
+           </pre>
+           <a id="read" href="">ĐỌC THỬ</a>
+           <a id="read" href=""> Mua ngay : 469.000 VNĐ</a>
+         </th>
+       </tr>
+     </table>
+     <hr>
+
+     <table>
+       <tr>
+         <th>
+          <a href=""><img id="anh" src="img/truyentranh_bh/duongrengang.jpg"></a>
+         </th>
+         <th>
+           <a  id="title" href="">Đường rẽ nang</a>
+           <pre>
+Tác giả : Phạm Nhật Vượng
+Số chương : 211
+Tình trạng : Full
+           </pre>
+           <a id="read" href="">ĐỌC THỬ</a>
+           <a id="read" href=""> Mua ngay : 421.000 VNĐ</a>
+         </th>
+       </tr>
+     </table>
+     <hr>
+
+     <table>
+       <tr>
+         <th>
+          <a href=""><img id="anh" src="img/truyentranh_bh/emgaidienvienthichtoi.jpg"></a>
+         </th>
+         <th>
+           <a  id="title" href="">Em gái diễn viên thích tôi</a>
+           <pre>
+Tác giả : Nhật Ánh
+Số chương : 119
+Tình trạng : Đang cập nhật 
+           </pre>
+           <a id="read" href="">ĐỌC THỬ</a>
+           <a id="read" href=""> Mua ngay : 469.000 VNĐ</a>
+         </th>
+       </tr>
+     </table>
+     <hr>
+
+     <table>
+       <tr>
+         <th>
+          <a href=""><img id="anh" src="img/truyentranh_bh/emyeuchi.jpg"></a>
+         </th>
+         <th>
+           <a  id="title" href="">Em yêu chị</a>
+           <pre>
+Tác giả : Tô Vận Cẩm
+Số chương : 421
+Tình trạng : Full
+           </pre>
+           <a id="read" href="">ĐỌC THỬ</a>
+           <a id="read" href=""> Mua ngay : 234.000 VNĐ</a>
+         </th>
+       </tr>
+     </table>
+     <hr>
+
+     <table>
+       <tr>
+         <th>
+          <a href=""><img id="anh" src="img/truyentranh_bh/lilybotron.jpg"></a>
+         </th>
+         <th>
+           <a  id="title" href="">Lily bỏ trốn</a>
+           <pre>
+Tác giả : Phan Anh
+Số chương : 567
+Tình trạng : Đang cập nhật 
+           </pre>
+           <a id="read" href="">ĐỌC THỬ</a>
+           <a id="read" href=""> Mua ngay : 50.000 VNĐ</a>
+         </th>
+       </tr>
+     </table>
+     <hr>
+
+     <table>
+       <tr>
+         <th>
+          <a href=""><img id="anh" src="img/truyentranh_bh/viyeumaden.jpg"></a>
+         </th>
+         <th>
+           <a  id="title" href="">Vì yêu mà đến</a>
+           <pre>
+Tác giả : Kim Dung
+Số chương : 234
+Tình trạng : Đang cập nhật 
+           </pre>
+           <a id="read" href="">ĐỌC THỬ</a>
+           <a id="read" href=""> Mua ngay : 100.000 VNĐ</a>
+         </th>
+       </tr>
+     </table>
+     <hr>
+
+      <table>
+       <tr>
+         <th>
+          <a href=""><img id="anh" src="img/truyentranh_dm/lily.jpg"></a>
+         </th>
+         <th>
+           <a  id="title" href="">Lily</a>
+           <pre>
+Tác giả : Kim Dung
+Số chương : 240
+Tình trạng : Đang cập nhật 
+           </pre>
+           <a id="read" href="">ĐỌC THỬ</a>
+           <a id="read" href=""> Mua ngay : 100.000 VNĐ</a>
+         </th>
+       </tr>
+     </table>
+     <hr>
+
+ <!-- DANH SÁCH TRUYỆN XUYÊN KHÔNG -->     
+      <h5 id="Truyện_xk" style="font-size: 20px;">Truyện Xuyên Không <img src="img/moi.gif"></h5><p><a href="#Truyện_nt">Về đầu trang</a></p> 
+      <hr>
+      <table>
+       <tr>
+         <th>
+          <a href=""><img id="anh" src="img/truyentranh_xk/bachluyenthanhtha.jpg"></a>
+         </th>
+         <th>
+           <a  id="title" href="">Bách luyện thành thần</a>
+           <pre>
+Tác giả : Bùi Dũng
+Số chương : 233
+Tình trạng : Full
+           </pre>
+           <a id="read" href="">ĐỌC THỬ</a>
+           <a id="read" href=""> Mua ngay : 469.000 VNĐ</a>
+         </th>
+       </tr>
+     </table>
+     <hr>
+
+     <table>
+       <tr>
+         <th>
+          <a href=""><img id="anh" src="img/truyentranh_xk/khuytheyphiuonbochong.jpg"></a>
+         </th>
+         <th>
+           <a  id="title" href="">Khuynh thế y phi muốn bỏ chồng</a>
+           <pre>
+Tác giả : Lạc Tâm
+Số chương : 456
+Tình trạng : Full
+           </pre>
+           <a id="read" href="">ĐỌC THỬ</a>
+           <a id="read" href=""> Mua ngay : 80.000 VNĐ</a>
+         </th>
+       </tr>
+     </table>
+     <hr>
+
+     <table>
+       <tr>
+         <th>
+          <a href=""><img id="anh" src="img/truyentranh_xk/phapycuongphi.jpg"></a>
+         </th>
+         <th>
+           <a  id="title" href="">Pháp y cuồng phi</a>
+           <pre>
+Tác giả : Chúc Tự Đan
+Số chương : 496
+Tình trạng : Full
+           </pre>
+           <a id="read" href="">ĐỌC THỬ</a>
+           <a id="read" href=""> Mua ngay : 119.000 VNĐ</a>
+         </th>
+       </tr>
+     </table>
+     <hr>
+
+     <table>
+       <tr>
+         <th>
+          <a href=""><img id="anh" src="img/truyentranh_xk/phongnghich.jpg"></a>
+         </th>
+         <th>
+           <a  id="title" href="">Phượng nghịch thiên hạ</a>
+           <pre>
+Tác giả : An DĨ Hiên
+Số chương :143
+Tình trạng : Full
+           </pre>
+           <a id="read" href="">ĐỌC THỬ</a>
+           <a id="read" href=""> Mua ngay : 69.000 VNĐ</a>
+         </th>
+       </tr>
+     </table>
+     <hr>
+
+     <table>
+       <tr>
+         <th>
+          <a href=""><img id="anh" src="img/truyentranh_xk/tieuhoangthuvatieuhoangthuc.jpg"></a>
+         </th>
+         <th>
+           <a  id="title" href="">Tiểu Hoàng Thư và Tiểu Hoàng Thúc</a>
+           <pre>
+Tác giả : Dương Tử
+Số chương : 189
+Tình trạng : Full
+           </pre>
+           <a id="read" href="">ĐỌC THỬ</a>
+           <a id="read" href=""> Mua ngay : 49.000 VNĐ</a>
+         </th>
+       </tr>
+     </table>
+     <hr>
+
+     <table>
+       <tr>
+         <th>
+          <a href=""><img id="anh" src="img/truyentranh_xk/vuongphixkmuonthangcp.jpg"></a>
+         </th>
+         <th>
+           <a  id="title" href="">Vương phi xuyên không muốn thăng cấp</a>
+           <pre>
+Tác giả : Hiểu Minh
+Số chương : 122
+Tình trạng : Full
+           </pre>
+           <a id="read" href="">ĐỌC THỬ</a>
+           <a id="read" href=""> Mua ngay : 400.000 VNĐ</a>
+         </th>
+       </tr>
+     </table>
+     <hr>
+
+     <table>
+       <tr>
+         <th>
+          <a href=""><img id="anh" src="img/truyentranh_xk/vuòngiakhongthetreu.jpg"></a>
+         </th>
+         <th>
+           <a  id="title" href="">Vương gia không thể trêu</a>
+           <pre>
+Tác giả : Huỳnh Lập
+Số chương : 233
+Tình trạng : Full
+           </pre>
+           <a id="read" href="">ĐỌC THỬ</a>
+           <a id="read" href=""> Mua ngay : 469.000 VNĐ</a>
+         </th>
+       </tr>
+     </table>
+     <hr>
+
+</div>
+
+<!--signature-->
+  <div class="signature">
+    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-pencil" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+      <path fill-rule="evenodd" d="M12.146.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-10 10a.5.5 0 0 1-.168.11l-5 2a.5.5 0 0 1-.65-.65l2-5a.5.5 0 0 1 .11-.168l10-10zM11.207 2.5L13.5 4.793 14.793 3.5 12 .5 1.207 11.207 2.5zm1.586 3L10.5 3.207 4 9.707V10h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.293l6.5-6.5zm-9.761 5.175l-.106.106-1.528 3.821 3.821-1.528.106-.106A.5.5 0 0 1 5 12.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.468-.325z"/>
+    </svg>
+    <i>Tôi đã sống hàng nghìn cuộc sống.  Tôi đã yêu hàng nghìn tình yêu. Tôi đã đi trong những thế giới xa xôi và đã thấy tận cùng của thời gian. Bởi vì tôi đọc sách</i> <br>
+        <b>"__GEORGE R. R. MARTIN__"</b>
+  </div>
+  <!--het signature-->
+<!--footer-->
+  <div class="footer">
+    <div class="footer-left">
+      <p style="font-family: Brush Script MT; font-size: x-large;">Book HNT</p>
+      <p>Cơ sở 1: Số 3, Cầu Giấy, Hà Nội <br> Cơ sở 2: Số 1, Nguyễn Khánh Toàn, Quan Hoa, Hà Nội</p>
+      <p><b>Làm bạn với Book HNT:</b></p>
+      <div>
+        <a target="_blank" href="https://www.facebook.com/profile.php?id=100010908735142">
+                <img src="img/fb.png">
+            </a>
+            <a target="_blank" href="https://www.instagram.com/dthhihi/?fbclid=IwAR07qOBe5z14WoS91I0HNkH4E4w2M_g8QN9hM6kPlGVuEeqJzTX5_RBDh2o">
+                    <img src="img/ig.png">
+                </a>
+                <a target="_blank" href="https://mail.google.com/mail/u/0/#inbox">
+                    <img src="img/gm.png">
+                </a>
+                <a target="_blank" href="https://www.youtube.com/watch?v=C_ceujR3Dfw&feature=youtu.be">
+                    <img src="img/youtube.png">
+                </a>
+      </div>
+    </div>
+    <div class="footer-center">
+      <p>BookHNT.com nhận đặt hàng trực tuyến và giao hàng tận nơi trên mọi miền tổ quốc.</p>
+      <div>
+        <p>ĐKKD số 0108796796 do SKHĐT TP Hà Nội cấp ngày 24/06/2019 <br>Chịu trách nhiệm nội dung: Đặng Thị Hiền, Nguyễn Thị Quỳnh Như, Nguyễn Hồng Tâm <br>Giấy xác nhận Đăng ký hoạt động phát hành xuất bản phẩm điện tử số 8132/XN-CXBIPH do Cục Xuất Bản, In và Phát hành cấp ngày 20/11/2020.</p>
+      </div>
+      <div>
+        <div style="width: 20%; float: left;">
+          <p><b>Thông tin liên hệ:</b></p>
+        </div>
+        <div style="width: 33%; float: left;">
+          <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-envelope" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2zm13 2.383l-4.758 2.855L15 11.114v-5.73zm-.034 6.878L9.271 8.82 8 9.583 6.728 8.82l-5.694 3.44A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.739zM1 11.114l4.758-2.876L1 5.383v5.73z"/>
+          </svg>
+          <span>Email: BookHNT@gmail.com</span>
+        </div>
+        <div style="width:34%; float: left;">
+          <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-telephone" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.062a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"/>
+          </svg>
+          <span>Phone: 0123456789</span>
+        </div>
+      </div>
+    </div>
+    <div class="footer-right1">
+      <div style="width: 50%; float: left; padding-right: 10px;"><img src="img/vtp.jpg" alt="viettelpay" width="100%"></div>
+      <div style="width: 50%; float: left; position: relative; top: 5px;"><img src="img/momo.jpg" alt="momo" width="83%"></div>
+    </div>
+  <!--het footer-->
+</body>
+</html>

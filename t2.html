@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Đăng nhập</title>
+	<link rel="stylesheet" href="trangchu.css">
+	<link rel="stylesheet" href="login-signup.css">
+	<script type="text/javascript" src="login-signup.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</head>
+<body class="login">
+	<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
+  Launch demo modal
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="login">
+		<div class="head">
+			<h2 style="text-align: center;">Đăng ký</h2>
+			<hr width="80%">
+		</div>
+		<div class="content1">
+			<form action="">
+				<div class="input">
+					<p>Số điện thoại/Email</p>
+					<input type="text" placeholder="Nhập số điện thoại hoặc Email">
+					<p>Mật khẩu</p>
+					<input type="password" placeholder="Nhập mật khẩu" id="password" name="password1">
+					<span onclick="show()" class="showPassword">Hiện</span>
+					<p>Nhập lại mật khẩu</p>
+					<input type="password" placeholder="Nhập lại mật khẩu" id="password" name="password2">
+					<span onclick="show()" class="showPassword">Hiện</span>
+				</div>
+				<div class="question">
+					<table cellpadding="5px">
+						<tr>
+							<td>
+								<input type="checkbox">
+							</td>
+							<td>
+								<span>Tôi đồng ý với các chính sách bảo mật của HNTBook.</span>
+							</td>
+						</tr>
+					</table>
+				</div>
+				<div class="button" style="text-align: center">
+					<button class="button-submit">
+						<span>Đăng ký</span>
+					</button>
+					<br>
+					<button class="button-cancel">
+						<span>Bỏ qua</span>
+					</button>
+				</div>
+				<div class="login-signup">
+					<span>Đã có tài khoản?</span>
+					<a href="login.html">Đăng nhập</a>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+</body>
+</html>

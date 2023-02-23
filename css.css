@@ -1,0 +1,136 @@
+*{
+ margin: 0;
+}
+.nen{
+	width: 100%;
+	height: 100%;
+	background-color: #f0f0f0;
+}
+#down{
+  position: -webkit-sticky; 
+  position: sticky;
+ z-index: 1;
+ }
+ul#thanh li a:hover{
+color: red;
+}
+.menu{
+ width: 100%;
+ height: auto;
+ border-bottom: 2px solid #3AD096;
+}
+/*het menu*/
+.baoboc{
+	width: 100%;
+	background-color: #f0f0f0;
+}
+
+.baoboc1{
+	width:88%;
+	margin: 0 auto;
+    height: auto ;
+    border-bottom: 1px solid black;
+}
+#trai{
+line-height: 35px;
+float: left;
+}
+.bangsp a{
+	font-size: 19px;
+	text-decoration: none;
+	border-bottom: 1px solid blue;
+}
+#trai a:hover{
+	color: #1F0CD4;
+	text-decoration: none;
+}
+/*hetbaoboc1 lan1*/
+.baoboc2{
+	width: 88%;
+	height: 495px;
+   position: relative;
+   margin: 0 auto;
+   border-bottom: 1px solid black;
+}
+/*tao khung ssp baoboc 3 ganvoibaoboc5*/
+.baoboc3{
+	width: 88%;
+	margin:0 auto;
+	height: 530px;
+}
+.bentrai{
+	width:350px;
+	height: 470px;
+	float: left;
+}
+.benphai{
+	width: 940px;
+	height: 457px;
+	float: left;
+}
+.benphai .khungnho{
+	width: 455px;
+	height: 230px;
+	margin-bottom: 10px;
+	float: left;
+	position: relative;
+	opacity: 90%;
+}
+.benphai .khungnho:hover{
+	opacity: 100%;
+    border: solid #E0E9A5;
+}
+span{
+	color: red;
+}
+.tdphai{
+	position: absolute;
+	left: 170px;
+}
+/*baoboc4*/
+.baoboc4{
+	width: 100%;
+	height: 482px;
+}
+.trongbaoboc{
+	width: 88%;
+	margin: 0 auto;
+	padding-top:30px;
+}
+.baoboc4 .hihi{
+	font-weight: bold;
+	padding-top:25px;
+	color: white;
+	float: left;
+}
+.bentrongbaoboc4 .tieuthuyet img{
+	width: 185px;
+	height: 271px;
+	opacity: 70%;
+    margin-left: 50px;
+}
+.bentrongbaoboc4 .tieuthuyet img:hover{
+	opacity: 100%;
+	border: solid white;
+}
+/*ket thuc bao boc4*/
+/*baoboc5*/
+
+/*ket thuc tao khung sp*/
+/*footer*/
+.footer{
+	width: 100%;
+	height: 300px;
+}
+.ngoai {
+  margin-top: 20px;
+  margin-left: 10px;
+}
+.ngoai b{
+	margin-left:  250px;
+}
+.abc ul li{
+	list-style: none;
+	float: left;
+	margin-left: 8px;
+}

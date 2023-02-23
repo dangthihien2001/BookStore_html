@@ -1,0 +1,58 @@
+*{
+ margin: 0;
+}
+.nen{
+	width: 100%;
+	height: 100%;
+	background-color: #f0f0f0;
+}
+#down{
+  position: -webkit-sticky; 
+  position: sticky;
+ z-index: 1;
+ }
+ul#thanh li a:hover{
+color: red;
+}
+.menu{
+ width: 100%;
+ height: auto;
+ border-bottom: 2px solid #3AD096;
+}
+#trai{
+line-height: 35px;
+float: left;
+}
+.bangsp a{
+	font-size: 19px;
+	text-decoration: none;
+	border-bottom: 1px solid blue;
+}
+#trai a:hover{
+	color: #1F0CD4;
+	text-decoration: none;
+}
+span{
+	color: red;
+}
+.khungnho{
+	opacity: 90%;
+}
+.khungnho:hover{
+	opacity: 100%;
+	border: 2px solid #E2B868;
+	box-shadow: 4px 4px 4px #8C8B8B;
+}
+h5 a{
+	color: black;
+	text-decoration: none;
+}
+h5 a:hover{
+	color:#0DA00D;
+	text-decoration: none;
+}
+/*het header*/
+
+
+
+
